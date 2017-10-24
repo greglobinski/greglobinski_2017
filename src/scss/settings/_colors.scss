@@ -1,0 +1,9 @@
+$dark-gray: #333;
+$mid-gray: #666;
+$dark-red: #d00;
+
+$text-color: $dark-gray;
+$header-color: $mid-gray;
+
+$text-link-color: $dark-red;
+$text-link-hover-color: lighten($dark-red, 10%);

@@ -1,0 +1,15 @@
+.l-page-container {
+  //background: gray;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+  min-height: 100vh;  
+}
+
+.l-main {
+  margin: 0 auto;
+  max-width: $page-max-width;
+  width: 100%;
+}

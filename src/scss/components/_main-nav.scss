@@ -1,0 +1,24 @@
+.c-main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+  .c-main-nav__elem {
+    display: inline-block;
+  }
+
+  .c-main-nav__link {
+    display: inline-block;
+    padding: .5em; 
+    text-decoration: none;
+  }
+
+    .c-main-nav__link--is-active {
+      color: $text-link-color;
+    }
+
+    
