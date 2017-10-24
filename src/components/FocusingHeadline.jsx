@@ -32,5 +32,5 @@ class FocusingHeadline  extends React.Component {
   }
 }
 
-export default FocusingHeadline;
+export default FocusingHeadline; 
 
