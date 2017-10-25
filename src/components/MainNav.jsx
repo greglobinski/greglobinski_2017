@@ -12,9 +12,9 @@ const ListLink = (props) => (
 const MainNav = () => (
   <ul className="c-main-nav">
     <ListLink to="/">Home</ListLink>
-    <ListLink to="/toolbox">Toolbox</ListLink>
-    <ListLink to="/playground">Playground</ListLink>
-    <ListLink to="/contact">Contact</ListLink>
+    <ListLink to="/toolbox/">Toolbox</ListLink>
+    <ListLink to="/playground/">Playground</ListLink>
+    <ListLink to="/contact/">Contact</ListLink>
   </ul>
 );
 
