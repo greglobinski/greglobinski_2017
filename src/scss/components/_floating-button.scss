@@ -1,0 +1,39 @@
+.c-floating-button {
+  animation-name: asdfafocus;
+  animation-duration: 2s; 
+  animation-iteration-count: infinite;
+  background: $mid-gray;
+  border: none;
+  border-radius: 100%;
+  color: #fff;
+  height: 5em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 5em;
+
+
+  &:hover {
+    //background: red;
+    //transform: scale(2.2)
+  }
+
+  svg {
+    height: 3em;
+    margin-top: -.2em;
+    width: 3em;
+  }
+}
+
+
+@keyframes asdfafocus {
+  0%   { 
+    transform: scale(1,1);      
+  }
+  50%  { 
+    transform: scale(1.2,1.2); 
+  }
+  100% { 
+    transform: scale(1,1); 
+  }
+}

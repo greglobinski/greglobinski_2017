@@ -1,9 +1,9 @@
 import React from "react";
-import FocusingHeadline from '../components/FocusingHeadline';
+import HeadlineWithFocus from '../components/HeadlineWithFocus';
 
 export default () => (
   <div className="c-content-box">
-    <FocusingHeadline>Playground</FocusingHeadline>
+    <HeadlineWithFocus>Playground</HeadlineWithFocus>
     <h2>What's that?</h2>
     <p>I build web interfaces using...</p>
   </div>

@@ -1,0 +1,39 @@
+.c-headline-focus {
+  color: $mid-gray;
+  font-size: 3.4em;
+  font-weight: 800;    
+  letter-spacing: -.03em;
+  margin: 0;
+  position: relative; 
+  transition: all .5s; 
+  transition-timing-function: ease;
+}
+
+  .c-headline-focus--super-big {
+    font-size: 4.6em;
+  }
+
+  .c-headline-focus--initial-state {
+    transform: scale(1.01,1.01);
+    color:  lighten($mid-gray, 30%);    
+  }  
+
+  .c-headline-focus--animation {
+    animation-name: focus;
+    animation-duration: .5s;  
+    animation-timing-function: ease;  
+  }  
+
+  @keyframes focus {
+    0%   { 
+      transform: scale(1,1);      
+    }
+    10%  { 
+      transform: scale(1.015,1.015); 
+      color: lighten($mid-gray, 15%);
+    }
+    100% { 
+      transform: scale(1,1); 
+      color: $mid-gray;
+    }
+  }

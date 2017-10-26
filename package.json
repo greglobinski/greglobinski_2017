@@ -11,6 +11,8 @@
     "gatsby": "^1.9.73",
     "gatsby-link": "^1.6.22",
     "gatsby-plugin-sass": "^1.0.12",
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "react-icons": "^2.2.7",
+    "window-resize-listener-react": "^1.0.3"
   }
 }

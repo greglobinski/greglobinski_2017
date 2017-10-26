@@ -1,9 +1,9 @@
 import React from "react";
-import FocusingHeadline from '../components/FocusingHeadline';
+import HeadlineWithFocus from '../components/HeadlineWithFocus';
 
 export default () => (
   <div className="c-content-box">
-    <FocusingHeadline>Hire me</FocusingHeadline>
+    <HeadlineWithFocus>Hire me</HeadlineWithFocus>
     <p>You can find me at: </p>
   </div>
 );

@@ -1,29 +1,27 @@
 import React from 'react';
 
-class FocusingHeadline  extends React.Component {
+class HeadlineWithFocus extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      initailStateClassName: 'c-focusing-headline--initial-state'
+      animationClassName: ''
     }
   }
 
   componentDidMount() {
-    // let { clientHeight, clientWidth } = this.refs.myImgContainer;
-
     setTimeout(() => {
       this.setState((prevState) => ({
-        initailStateClassName: ''
+        animationClassName: 'c-headline-focus--animation'
       }));
-    },5);
+    },5);  
   }
 
   render() { 
     return (
         <h1 
-          className={ `c-focusing-headline
+          className={ `c-headline-focus
                       ${this.props.modifierClassNames} 
-                      ${this.state.initailStateClassName}` } 
+                      ${this.state.animationClassName}` } 
           ref="myImgContainer"
         >            
           { this.props.children }
@@ -32,5 +30,5 @@ class FocusingHeadline  extends React.Component {
   }
 }
 
-export default FocusingHeadline; 
+export default HeadlineWithFocus; 
 

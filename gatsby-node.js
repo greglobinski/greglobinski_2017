@@ -3,10 +3,10 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     if (page.path.match(/^\/$/)) { 
-      page.layout = "Home"
+      page.layout = "HomeLayout"
       createPage(page)
     }
     
-    resolve()
+    resolve() 
   })
 }
