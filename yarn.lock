@@ -7408,6 +7408,10 @@ type-of@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/type-of/-/type-of-2.0.1.tgz#e72a1741896568e9f628378d816d6912f7f23972"
 
+typeface-exo@^0.0.43:
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/typeface-exo/-/typeface-exo-0.0.43.tgz#4aabf4efc896c8637f52fafdbf7b133394572fb9"
+
 ua-parser-js@^0.7.9:
   version "0.7.17"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"

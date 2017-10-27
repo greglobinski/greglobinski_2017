@@ -13,6 +13,7 @@
     "gatsby-plugin-sass": "^1.0.12",
     "normalize.css": "^7.0.0",
     "react-icons": "^2.2.7",
+    "typeface-exo": "^0.0.43",
     "window-resize-listener-react": "^1.0.3"
   }
 }
