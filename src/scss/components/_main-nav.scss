@@ -1,41 +1,126 @@
 .c-main-nav {
   display: flex;
+  //background: yellow;
   flex-direction: row;
-  justify-content: flex-end;
+  //flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
-  .c-main-nav__elem {
-    display: inline-block;
+.c-main-nav__elem {
+  border-radius: .2em; 
+  display: inline-block; 
+
+  &:hover {
+    background: $nav-link-hover-bg-color;
+  }
+}
+
+.c-main-nav__link {
+  border: none;
+  color: $nav-link-color;
+  display: inline-block;
+  font-size: 1em;
+  padding: .6em .5em .5em; 
+  text-decoration: none;
+
+  &:hover {      
+    border: none;
   }
 
-  .c-main-nav__link {
-    border-radius: .2em;
-    color: $nav-link-color;
+  svg {
     display: inline-block;
-    font-size: 1em;
-    padding: .6em .7em .5em; 
-    text-decoration: none;
+    font-size: 1.3em;
+    margin: 0 0 0 0;
+    color: $nav-link-icon-color;
+  }
+}
 
-    &:hover {
-      background: $nav-link-hover-bg-color;
-    }
+.c-main-nav__link--is-active {
+  color: $nav-link-active-color;
+  font-weight: 600;
+  letter-spacing: -.02em;
+
+  svg {
+    color: $nav-link-active-icon-color;
+  }
+}
+
+.c-main-nav__elem--close-link {
+  background: #fff;
+  border: 1px dashed $nav-link-active-color;  
+  margin-left: .5em;
+  z-index: 2;
+  
+  svg {
+    color: $nav-link-active-icon-color;
+  }
+
+  &:hover {
+    background: #fff;
 
     svg {
-      font-size: 1.3em;
-      margin: -.2em .1em 0 0;
-      color: $nav-link-icon-color;
+      color: $nav-link-active-color;
     }
+  } 
+}
+
+.c-main-nav__text {
+  display: none;    
+  vertical-align: middle;
+}
+
+.c-main-nav--is-hidden {
+  .c-main-nav__elem {
+    visibility: hidden;
+  }
+  .c-main-nav__elem--close-link {
+    visibility: visible;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.c-main-nav--is-open {
+  border: 1px dashed $nav-link-active-icon-color;
+  border-radius: .3em;
+  background: #fff;
+  flex-direction: column;
+  margin-top: -1px;
+  padding: .5rem .7rem;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 0;
+
+  .c-main-nav__link {
+    padding: .6em .3em;
   }
 
-    .c-main-nav__link--is-active {
-      color: $nav-link-active-color;
+  .c-main-nav__text {
+    display: inline-block;
+    padding: 0 0 0 .7em;    
+  }
 
-      svg {
-        color: $nav-link-active-icon-color;
-      }
-    }
-
+  .c-main-nav__elem--close-link {
+    display: none;
+  }
+}
     
+
+@media screen and (min-width: $media-width-M) {
+  .c-main-nav__text  {
+    display: inline-block;
+    padding: 0 0 0 .2em;
+  }
+  .c-main-nav__elem--close-link {
+    display: none; 
+  }
+}
+
+@media screen and (min-width: $media-width-XL) {
+
+}    

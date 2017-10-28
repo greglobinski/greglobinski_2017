@@ -1,4 +1,5 @@
 .c-headline-focus {
+  background: yellow;
   color: $mid-gray;
   font-size: 3.4em;
   font-weight: 800;    
@@ -7,10 +8,12 @@
   position: relative; 
   transition: all .5s; 
   transition-timing-function: ease;
+  width: 100%;
 }
 
   .c-headline-focus--super-big {
-    font-size: 4.6em;
+    font-size: 3.6em;
+    margin-bottom: .5em;
   }
 
   .c-headline-focus--initial-state {

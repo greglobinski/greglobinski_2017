@@ -1,5 +1,6 @@
 h1, h2, h3 {
-  font-family: Exo, sans-serif;
+  color: $head-text-color;
+  font-family: Exo, sans-serif; 
   font-weight: 300;
   line-height: 1;
 }
@@ -14,4 +15,14 @@ h2 {
 
 h3 {
   font-size: 2em;
+}
+
+a {
+  color: $first-color;
+  border-bottom: 1px dotted lighten($first-color, 20%);
+  text-decoration: none;
+
+  &:hover {
+    border-bottom-style: solid;
+  }
 }

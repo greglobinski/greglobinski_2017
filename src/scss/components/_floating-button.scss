@@ -2,14 +2,14 @@
   animation-name: floating-button-anim;
   animation-duration: 1.2s; 
   animation-iteration-count: infinite;
-  background: $mid-gray;
+  background: $first-color;
   border: none;
   border-radius: 100%;  
   color: #fff;
   height: 5em;
   position: absolute;
   right: 0;
-  stroke: lighten($mid-gray, 20%);
+  stroke: darken($first-color, 20%);
   text-align: center;
   width: 5em;
 
@@ -24,7 +24,7 @@
 @keyframes floating-button-anim {
   0%   { 
     transform: scale(1,1);      
-    box-shadow: 0 0 0 0 white, 0 0 0 1px $mid-gray;
+    box-shadow: 0 0 0 0 white, 0 0 0 1px $first-color;
   }
   50%  {  
     transform: scale(1.2,1.2); 

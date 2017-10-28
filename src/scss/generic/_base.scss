@@ -1,3 +1,9 @@
+html {  
+  font-size: 1em;
+  -webkit-text-size-adjust: 1em; 
+  -ms-text-size-adjust: 1em; 
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,6 +11,5 @@
 body {
   height: 100%;
   font-family: Roboto, sans-serif;
-  color: $text-color;
+  color: $body-text-color;
 }
-

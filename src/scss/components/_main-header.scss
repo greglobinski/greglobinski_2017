@@ -2,7 +2,26 @@
   //background: red;
   display: flex;
   justify-content: space-between;
-  margin: 3rem auto 0;
+  margin: 1.2rem auto 0;
   max-width: $page-max-width;
   width: 100%;
+}
+
+.c-main-header__logo {
+  //background: blue;
+}
+
+.c-main-header__nav {
+  position: relative;
+}
+
+
+@media screen and (min-width: $media-width-S) {
+
+}
+
+@media screen and (min-width: $media-width-XL) {
+  .c-main-header {
+    margin: 3rem auto 0;
+  }
 }

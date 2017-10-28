@@ -27,39 +27,48 @@ class Index extends React.Component {
   }  
   
   positionFloatingButton() {
-    this.setState(() => ({
-      floatingButtonTop: `${this.subHeadline.offsetTop}px`,
-      floatingButtonRight: `${this.subHeadline.offsetLeft}px`
-    }))    
+    //console.log(window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth);
+    // console.log(window.innerWidth, this.subHeadline.offsetLeft, this.subHeadline.offsetWidth, this.floatingButton.offsetWidth);
+    // this.setState(() => ({
+    //   floatingButtonTop: `${this.subHeadline.offsetTop}px`,
+    //   floatingButtonRight: `${window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth - (this.floatingButton.offsetWidth * 1.8)}px` 
+    // }))    
   }
 
-  render() {
+  render() { 
     return (
      
         <div className="l-page-container">
-          <MainHeader></MainHeader>
-          <main className="l-main">
+          <MainHeader></MainHeader> 
+        {/* 
+          
+        */}
+            <main className="l-main">
             <div className="c-content-box">
-              <HeadlineWithFocus 
-                modifierClassNames="c-headline-focus--super-big"
+              <HeadlineWithFocus  
+                modifierClassNames="c-headline-focus c-headline-focus--super-big"
               > 
                 Hi, I'm a front-end web developer
               </HeadlineWithFocus>
-              <h2 ref={(h2) => { this.subHeadline = h2; }}>
+              <h2 
+                className="c-content-box__subheadline c-content-box__subheadline--with-button"
+                ref={(h2) => { this.subHeadline = h2; }}
+              >
                 I build web interfaces
               </h2>
             </div>
-          </main>
-          <MainFooter></MainFooter>
-          <FloatingButton 
+          </main>  
+          <MainFooter></MainFooter>   
+          {/* 
+                                <FloatingButton 
             top={this.state.floatingButtonTop}
             right={this.state.floatingButtonRight}
-          />  
+            buttonRef={(button) => { this.floatingButton = button; }}
+          /> 
+
+          */}
           <ReactWindowResizeListener onResize={this.windowResizeHandler} />          
         </div>
-        
-      
-      
     )
   }
 };

@@ -3,16 +3,16 @@ $mid-gray: #666;
 $light-gray: #999;
 $dark-red: #d00;
 
-$text-color: $dark-gray;
-$header-color: $mid-gray;
+$first-color: #744C9E;
 
+$body-text-color: $dark-gray;
+$head-text-color: $mid-gray;
 
 $text-link-color: $dark-red;
 $text-link-hover-color: lighten($dark-red, 10%);
 
-
-$nav-link-color: $mid-gray;
-$nav-link-icon-color: lighten($nav-link-color, 30%);
+$nav-link-color: lighten($mid-gray, 20%);
+$nav-link-icon-color: lighten($nav-link-color, 20%);
 $nav-link-hover-bg-color: lighten($light-gray, 38%);
-$nav-link-active-color: $dark-red;
+$nav-link-active-color: $first-color;
 $nav-link-active-icon-color: lighten($nav-link-active-color, 20%);

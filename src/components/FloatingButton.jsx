@@ -1,15 +1,19 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import TiArrowRightOutline from 'react-icons/lib/ti/arrow-right-outline';
+import FaArrowRight from 'react-icons/lib/fa/arrow-right';
 
 
-const FloatingButton = (props) => (
-  <button 
-    className="c-floating-button"
-    style={{ top: props.top, right: props.right }}
-  >
-  <TiArrowRightOutline />
-  </button>
-);
+const FloatingButton = (props) => {
+
+  return (
+    <button 
+      className="c-floating-button"
+      style={{ top: props.top, right: props.right }}
+      ref={ props.buttonRef }
+    >
+    <FaArrowRight />
+    </button>
+  )
+} 
 
 export default FloatingButton;

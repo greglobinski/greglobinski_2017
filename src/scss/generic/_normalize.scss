@@ -10,6 +10,11 @@
  */
 
 html {
+
+  font-size: 1em; /* 1 */
+  -webkit-text-size-adjust: 1em; /* 2 */
+  -ms-text-size-adjust: 1em; /* 2 */ 
+
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
