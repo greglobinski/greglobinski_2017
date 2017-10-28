@@ -1,5 +1,9 @@
 .c-main-header {
   //background: red;
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
   display: flex;
   justify-content: space-between;
   margin: 1.2rem auto 0;
