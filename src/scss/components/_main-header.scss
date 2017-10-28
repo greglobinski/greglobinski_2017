@@ -1,10 +1,5 @@
 .c-main-header {
   //background: red;
-  display: -webkit-box; 
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex; 
-  display: flex;
   justify-content: space-between;
   margin: 1.2rem auto 0;
   max-width: $page-max-width;
@@ -13,9 +8,11 @@
 
 .c-main-header__logo {
   //background: blue;
+  float: left;
 }
 
 .c-main-header__nav {
+  float: right;
   position: relative;
 }
 
