@@ -90,7 +90,13 @@
 .c-main-nav--is-open {
   border: 1px dashed $nav-link-active-icon-color;
   border-radius: .3em;
-  background: #fff;
+  background: #eee;
+  -moz-box-direction: column;
+  -webkit-box-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flexbox-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-top: -1px;
   padding: .5rem .7rem;
