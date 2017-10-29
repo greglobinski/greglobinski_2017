@@ -1,8 +1,4 @@
 .c-main-nav {
-  display: -webkit-box; 
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex; 
   display: flex;
   //background: yellow;
   flex-direction: row;
@@ -90,13 +86,7 @@
 .c-main-nav--is-open {
   border: 1px dashed $nav-link-active-icon-color;
   border-radius: .3em;
-  background: #eee;
-  -moz-box-direction: column;
-  -webkit-box-direction: column;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flexbox-direction: column;
-  -ms-flex-direction: column;
+  background: #fff;
   flex-direction: column;
   margin-top: -1px;
   padding: .5rem .7rem;
