@@ -1,8 +1,6 @@
 .c-main-nav {
   display: flex;
-  //background: yellow;
   flex-direction: row;
-  //flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
   margin: 0;
@@ -41,9 +39,6 @@
 
 .c-main-nav__link--is-active {
   color: $nav-link-active-color;
-  //font-weight: 600;
-  //letter-spacing: -.02em;
-
   svg {
     color: $nav-link-active-icon-color;
   }
@@ -53,7 +48,7 @@
   background: #fff;
   border: 1px dashed $nav-link-active-color;  
   margin-left: .5em;
-  z-index: 2;
+  z-index: 10;
   
   svg {
     color: $nav-link-active-icon-color;
@@ -69,18 +64,19 @@
 }
 
 .c-main-nav__text {
-  display: none;    
+  display: none;       
   vertical-align: middle;
 }
 
 .c-main-nav--is-hidden {
+  z-index: 5;
+
   .c-main-nav__elem {
     visibility: hidden;
   }
   .c-main-nav__elem--close-link {
     visibility: visible;
-    border-bottom: 1px solid #fff;
-    z-index: 10;
+    border-bottom: 1px solid #fff;    
   }
 }
 
@@ -90,7 +86,7 @@
   border-radius: .3em;
   background: #fff;
   flex-direction: column;
-  margin-top: -2px;
+  margin-top: -1px;
   padding: .5rem .7rem;
   position: absolute;
   right: 0;
@@ -122,7 +118,7 @@
 @media screen and (min-width: $media-width-M) {
   .c-main-nav__text  {
     display: inline-block;
-    padding: 0 0 0 .2em;
+    padding: 0 0 0 .5em;
   }
   .c-main-nav__elem--close-link {
     display: none; 

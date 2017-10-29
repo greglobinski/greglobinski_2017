@@ -1,12 +1,12 @@
 .c-main-footer {
-  //background: red; 
-  padding: 2em 0 0;
+  //background: red;  
+  padding: 3em 0 0;
   text-align: center;
 }
 
   .c-main-footer__note {
     color: lighten($body-text-color, 40%);
-    font-size: .8rem;  
+    font-size: .85em;  
     line-height: 1.3;
     transition: color 1s;
     
