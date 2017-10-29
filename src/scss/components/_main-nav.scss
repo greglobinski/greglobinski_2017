@@ -84,6 +84,7 @@
 }
 
 .c-main-nav--is-open {
+  align-content: stretch;
   border: 1px dashed $nav-link-active-icon-color;
   border-radius: .3em;
   background: #fff;
@@ -95,6 +96,12 @@
   top: 100%;
   width: 100%;
   z-index: 0;
+
+  .c-main-nav__elem {
+    background: red;
+    display: block;
+    padding: 0 2px;
+  }
 
   .c-main-nav__link {
     background: yellow;
