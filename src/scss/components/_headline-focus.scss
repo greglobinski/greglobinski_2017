@@ -4,7 +4,6 @@
   font-size: 2.2em;
   font-weight: 800;    
   letter-spacing: -.03em;
-  //line-height: .95em
   margin: 0;
   position: relative; 
   transition: all .5s; 
@@ -14,6 +13,7 @@
   .c-headline-focus--super-big {
     font-size: 3em;
     line-height: .9;
+    padding-bottom: .5em;
   }
 
   .c-headline-focus--initial-state {
@@ -40,3 +40,29 @@
       color: $mid-gray;
     }
   }
+
+
+@media screen and (min-width: $media-width-S) {
+  .c-headline-focus--super-big {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (min-width: $media-width-M) {
+  .c-headline-focus--super-big {
+    font-size: 3.75em;
+  }
+}  
+
+@media screen and (min-width: $media-width-L) {
+  .c-headline-focus--super-big {
+    font-size: 4em;
+  }
+}  
+
+@media screen and (min-width: $media-width-XL) {
+  .c-headline-focus--super-big {
+    font-size: 4.25em;
+    line-height: .85;
+  }
+}  

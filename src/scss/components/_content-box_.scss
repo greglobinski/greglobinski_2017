@@ -1,0 +1,25 @@
+.c-content-box {    
+  padding: 1.5em 0 3em;
+}
+
+  .c-content-box__subheadline {
+           
+  }
+
+    .c-content-box__subheadline--with-button {
+      //background: red; 
+      display: block;   
+      max-width: 65%;
+    }  
+
+
+@media screen and (min-width: $media-width-L) {
+
+}  
+
+@media screen and (min-width: $media-width-XL) {
+  .c-content-box {    
+    max-width: 50rem;
+    margin: 0 auto;
+  }   
+}    

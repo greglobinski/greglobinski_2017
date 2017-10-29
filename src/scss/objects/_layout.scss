@@ -13,3 +13,26 @@
   max-width: $page-max-width;
   width: 100%;
 }
+
+
+@media screen and (min-width: $media-width-S) {
+  .l-page-container {
+    padding: .5rem 2rem;
+  }
+}
+
+@media screen and (min-width: $media-width-M) {
+  .l-page-container {
+    padding: 1rem 3rem .5rem;
+  }
+}  
+
+/*
+@media screen and (min-width: $media-width-L) {
+
+}  
+
+@media screen and (min-width: $media-width-XL) {
+
+} 
+*/ 
