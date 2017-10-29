@@ -11,6 +11,7 @@ class Index extends React.Component {
   constructor(props) {
     super(props);   
     this.windowResizeHandler = this.windowResizeHandler.bind(this);
+    this.positionFloatingButton = this.positionFloatingButton.bind(this);
     this.state = {
       subHeadlineModifierClassName: 'is-pos-relative',
       floatingButtonTop: '10px',
@@ -22,17 +23,21 @@ class Index extends React.Component {
     this.positionFloatingButton();
   }
 
+  componentDidUpdate() {
+    console.log(this.state);
+  }
+
   windowResizeHandler(event) {
     this.positionFloatingButton();
   }  
   
   positionFloatingButton() {
-    //console.log(window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth);
-    // console.log(window.innerWidth, this.subHeadline.offsetLeft, this.subHeadline.offsetWidth, this.floatingButton.offsetWidth);
-    // this.setState(() => ({
-    //   floatingButtonTop: `${this.subHeadline.offsetTop}px`,
-    //   floatingButtonRight: `${window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth - (this.floatingButton.offsetWidth * 1.8)}px` 
-    // }))    
+    setTimeout(() => {
+      this.setState(() => ({
+        floatingButtonTop: `${this.subHeadline.offsetTop + (this.subHeadline.offsetHeight / 2) - (this.floatingButton.offsetHeight / 2)}px`,
+        floatingButtonRight: `${window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth - (this.floatingButton.offsetWidth * 1.3)}px` 
+      }))       
+    }, 250);
   }
 
   render() { 
@@ -40,9 +45,6 @@ class Index extends React.Component {
      
         <div className="l-page-container">
           <MainHeader></MainHeader> 
-        {/* 
-          
-        */}
           <main className="l-main">
             <div className="c-content-box">
               <h2>Hi, it's Greg</h2>              
@@ -59,23 +61,12 @@ class Index extends React.Component {
               </h2>              
             </div>
           </main>  
-          <MainFooter></MainFooter> 
-            
-          {/* 
-
-                       
-
-
-
-
-            
-                                <FloatingButton 
+          <MainFooter></MainFooter>             
+          <FloatingButton 
             top={this.state.floatingButtonTop}
             right={this.state.floatingButtonRight}
             buttonRef={(button) => { this.floatingButton = button; }}
-          /> 
-
-          */}
+          />             
           <ReactWindowResizeListener onResize={this.windowResizeHandler} />          
         </div>
     )

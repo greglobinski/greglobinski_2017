@@ -84,7 +84,7 @@
   align-content: stretch;
   border: 1px dashed $nav-link-active-icon-color;
   border-radius: .3em;
-  background: #fff;
+  background: $body-bg-color;
   flex-direction: column;
   margin-top: -1px;
   padding: .5rem .7rem;

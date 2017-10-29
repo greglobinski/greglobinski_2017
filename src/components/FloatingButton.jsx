@@ -11,7 +11,7 @@ const FloatingButton = (props) => {
       style={{ top: props.top, right: props.right }}
       ref={ props.buttonRef }
     >
-    <FaArrowRight />
+      <FaArrowRight />
     </button>
   )
 } 
