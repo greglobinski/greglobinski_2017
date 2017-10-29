@@ -43,23 +43,32 @@ class Index extends React.Component {
         {/* 
           
         */}
-            <main className="l-main">
+          <main className="l-main">
             <div className="c-content-box">
+              <h2>Hi, it's Greg</h2>              
               <HeadlineWithFocus  
                 modifierClassNames="c-headline-focus c-headline-focus--super-big"
               > 
-                Hi, I'm a front-end web developer
+                I'm a front-end web developer
               </HeadlineWithFocus>
               <h2 
                 className="c-content-box__subheadline c-content-box__subheadline--with-button"
                 ref={(h2) => { this.subHeadline = h2; }}
               >
                 I build web interfaces
-              </h2>
+              </h2>              
             </div>
           </main>  
-          <MainFooter></MainFooter>   
+          <MainFooter></MainFooter> 
+            
           {/* 
+
+                       
+
+
+
+
+            
                                 <FloatingButton 
             top={this.state.floatingButtonTop}
             right={this.state.floatingButtonRight}

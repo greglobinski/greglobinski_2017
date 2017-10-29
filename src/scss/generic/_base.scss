@@ -12,4 +12,15 @@ body {
   height: 100%;
   font-family: Roboto, sans-serif;
   color: $body-text-color;
+  word-wrap: normal;
+}
+
+@media screen and (min-width: $media-width-L) {
+
+  html {  
+    font-size: 1.1em;
+    -webkit-text-size-adjust: 1.1em; 
+    -ms-text-size-adjust: 1.1em; 
+  }
+
 }

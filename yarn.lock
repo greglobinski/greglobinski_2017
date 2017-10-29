@@ -3005,6 +3005,13 @@ gatsby-plugin-netlify@^1.0.6:
     lodash "^4.17.4"
     webpack-assets-manifest "^1.0.0"
 
+gatsby-plugin-nprogress@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-1.0.7.tgz#36cf18776d22c282d3355d32b8c212afdf1a2907"
+  dependencies:
+    babel-runtime "^6.26.0"
+    nprogress "^0.2.0"
+
 gatsby-plugin-postcss-sass@^1.0.12:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss-sass/-/gatsby-plugin-postcss-sass-1.0.12.tgz#41ded69c0b57c34e6d1b9638745531bea715c4ac"
@@ -4978,6 +4985,10 @@ npmlog@2.0.3:
     ansi "~0.3.1"
     are-we-there-yet "~1.1.2"
     gauge "~1.2.5"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
 
 nth-check@~1.0.1:
   version "1.0.1"

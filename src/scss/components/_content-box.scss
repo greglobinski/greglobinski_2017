@@ -1,16 +1,13 @@
 .c-content-box {    
-  margin: 0 auto;
-  max-width: 50rem;
-  padding: 2me 0;
+  padding: 3em 0;
 }
 
   .c-content-box__subheadline {
-        
+           
   }
 
     .c-content-box__subheadline--with-button {
-      background: red;
-      display: inline;
-      margin-right: 200px; 
-
-    }
+      //background: red; 
+      display: block;   
+      max-width: 60%;
+    } 
