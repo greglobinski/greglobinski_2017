@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import { FaMapMarker, FaEnvelopeO, FaPaperPlaneO, FaWrench, FaChevronDown } from 'react-icons/lib/fa';
+import { FaMapMarker, FaEnvelopeO, FaPaperPlaneO, FaWrench, FaChevronDown, FaChevronUp } from 'react-icons/lib/fa';
 import { TiCodeOutline } from 'react-icons/lib/ti';
 
 const ListLink = (props) => (
@@ -87,7 +87,7 @@ class MainNav extends React.Component {
             onClick={this.toggleMenu}
           >
             <a href="#" className="c-main-nav__link">
-              <FaChevronDown />
+              { (this.state.mainNavModifierClassName) ? <FaChevronUp /> : <FaChevronDown />  }
               <span className="c-main-nav__text">Close</span>
             </a>
           </li>    

@@ -41,8 +41,8 @@
 
 .c-main-nav__link--is-active {
   color: $nav-link-active-color;
-  font-weight: 600;
-  letter-spacing: -.02em;
+  //font-weight: 600;
+  //letter-spacing: -.02em;
 
   svg {
     color: $nav-link-active-icon-color;
@@ -80,6 +80,7 @@
   .c-main-nav__elem--close-link {
     visibility: visible;
     border-bottom: 1px solid #fff;
+    z-index: 10;
   }
 }
 
@@ -89,7 +90,7 @@
   border-radius: .3em;
   background: #fff;
   flex-direction: column;
-  margin-top: -1px;
+  margin-top: -2px;
   padding: .5rem .7rem;
   position: absolute;
   right: 0;
@@ -98,13 +99,11 @@
   z-index: 0;
 
   .c-main-nav__elem {
-    background: red;
     display: block;
     padding: 0 2px;
   }
 
   .c-main-nav__link {
-    background: yellow;
     display: block;
     padding: .6em .3em;    
   }
