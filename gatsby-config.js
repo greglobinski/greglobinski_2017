@@ -2,7 +2,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   plugins: [
-   // `gatsby-plugin-sass`
+    // `gatsby-plugin-sass`
     {
       resolve: `gatsby-plugin-postcss-sass`,
       options: {
@@ -11,6 +11,7 @@ module.exports = {
         ],
         precision: 8 // SASS default: 5
       }
-    }
+    },
+    `gatsby-plugin-netlify`
   ]
 }
