@@ -13,7 +13,7 @@
   .c-headline-focus--super-big {
     font-size: 3em;
     line-height: .9;
-    padding-bottom: .5em;
+    padding-bottom: .7em;
   }
 
   .c-headline-focus--initial-state {
@@ -22,12 +22,12 @@
   }  
 
   .c-headline-focus--animation {
-    animation-name: focus;
+    animation-name: headline-focus-animation;
     animation-duration: .5s;  
     animation-timing-function: ease;  
   }  
 
-  @keyframes focus {
+  @keyframes headline-focus-animation {
     0%   { 
       transform: scale(1,1);      
     }

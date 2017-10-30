@@ -13,9 +13,9 @@ class Index extends React.Component {
     this.windowResizeHandler = this.windowResizeHandler.bind(this);
     this.positionFloatingButton = this.positionFloatingButton.bind(this);
     this.state = {
-      subHeadlineModifierClassName: 'is-pos-relative',
-      floatingButtonTop: '10px',
-      floatingButtonRight: '10px'
+      floatingButtonTop: '',
+      floatingButtonRight: '',
+      floatingButtonModifierClassName: ''
     }
   } 
 
@@ -23,21 +23,23 @@ class Index extends React.Component {
     this.positionFloatingButton();
   }
 
-  componentDidUpdate() {
-    console.log(this.state);
-  }
-
   windowResizeHandler(event) {
     this.positionFloatingButton();
   }  
   
   positionFloatingButton() {
+    this.setState(() => ({
+      floatingButtonModifierClassName: '',
+      floatingButtonRight: `-100px`                                
+    })) 
+
     setTimeout(() => {
       this.setState(() => ({
+        floatingButtonModifierClassName: 'c-floating-button--is-active',
         floatingButtonTop: `${this.subHeadline.offsetTop + (this.subHeadline.offsetHeight / 2) - (this.floatingButton.offsetHeight / 2)}px`,
-        floatingButtonRight: `${window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth - (this.floatingButton.offsetWidth * 1.3)}px` 
+        floatingButtonRight: `${window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth - (this.floatingButton.offsetWidth * 1.5)}px`                                
       }))       
-    }, 250);
+    }, 500);
   }
 
   render() { 
@@ -65,6 +67,7 @@ class Index extends React.Component {
           <FloatingButton 
             top={this.state.floatingButtonTop}
             right={this.state.floatingButtonRight}
+            modifierClassName={this.state.floatingButtonModifierClassName}
             buttonRef={(button) => { this.floatingButton = button; }}
           />             
           <ReactWindowResizeListener onResize={this.windowResizeHandler} />          

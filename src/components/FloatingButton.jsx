@@ -7,7 +7,7 @@ const FloatingButton = (props) => {
 
   return (
     <button 
-      className="c-floating-button"
+      className={ `c-floating-button ${props.modifierClassName}` }
       style={{ top: props.top, right: props.right }}
       ref={ props.buttonRef }
     >

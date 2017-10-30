@@ -1,23 +1,37 @@
-.c-floating-button {
-  animation-name: floating-button-anim;
-  animation-duration: 1.2s; 
-  animation-iteration-count: infinite;
+.c-floating-button {  
   background: $first-color;
   border: none;
   border-radius: 100%;  
   color: $body-bg-color;
+  cursor: pointer;
   height: 4em;
+  visibility: hidden;
   position: absolute;
-  right: 0;
+  right: -100px;
   stroke: darken($first-color, 20%);
-  text-align: center;
-  width: 4em;
+  text-align: center;    
+  transition: right .5s, background .3s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  width: 4em;  
+  z-index: 1000;
+
+  &:hover {
+    background: orange;
+  }
 
   svg {
     height: 2.6em;
     margin-top: -.2em;
     width: 2.6em;
   }
+}
+
+.c-floating-button--is-active {
+  animation-name: floating-button-anim;
+  animation-duration: 1.2s; 
+  animation-iteration-count: infinite;
+  display: block;  
+  visibility: visible;
 }
 
 
