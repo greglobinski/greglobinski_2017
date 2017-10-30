@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  z-index: 10;
 }
 
 .c-main-nav__elem {
@@ -48,7 +49,6 @@
   background: #fff;
   border: 1px dashed $nav-link-active-color;  
   margin-left: .5em;
-  z-index: 110;
   
   svg {
     color: $nav-link-active-icon-color;
@@ -69,7 +69,6 @@
 }
 
 .c-main-nav--is-hidden {
-  z-index: 105;
 
   .c-main-nav__elem {
     visibility: hidden;
@@ -92,7 +91,7 @@
   right: 0;
   top: 100%;
   width: 100%;
-  z-index: 100;
+  z-index: 5;
 
   .c-main-nav__elem {
     display: block;

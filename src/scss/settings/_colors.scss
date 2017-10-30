@@ -1,20 +1,23 @@
-$dark-gray: #333;
-$mid-gray: #666;
-$light-gray: #999;
-$dark-red: #d00;
+$dark-gray-color: #333;
+$mid-gray-color: #666;
+$light-gray-color: #999;
+$dark-red-color: #d00;
 $white-color: #fff;
+$lila-color: rgb(166, 97, 194); // #744C9E;
+$orange-color: orange;
 
-$first-color: rgb(166, 97, 194); // #744C9E;
+$first-color: $lila-color;
+$second-color: $orange-color;
 
-$body-text-color: $dark-gray;
+$body-text-color: $dark-gray-color;
 $body-bg-color: $white-color;
-$head-text-color: $mid-gray;
+$head-text-color: $mid-gray-color;
 
-$text-link-color: $dark-red;
-$text-link-hover-color: lighten($dark-red, 10%);
+$text-link-color: $dark-red-color;
+$text-link-hover-color: lighten($dark-red-color, 10%);
 
-$nav-link-color: lighten($mid-gray, 20%);
+$nav-link-color: lighten($mid-gray-color, 20%);
 $nav-link-icon-color: lighten($nav-link-color, 20%);
-$nav-link-hover-bg-color: lighten($light-gray, 38%);
+$nav-link-hover-bg-color: lighten($light-gray-color, 38%);
 $nav-link-active-color: $first-color;
 $nav-link-active-icon-color: lighten($nav-link-active-color, 20%);

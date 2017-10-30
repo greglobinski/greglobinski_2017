@@ -1,6 +1,6 @@
 .c-headline-focus {
   //background: yellow;
-  color: $mid-gray;
+  color: $mid-gray-color;
   font-size: 2.2em;
   font-weight: 800;    
   letter-spacing: -.03em;
@@ -18,7 +18,7 @@
 
   .c-headline-focus--initial-state {
     transform: scale(1.01,1.01);
-    color:  lighten($mid-gray, 30%);    
+    color:  lighten($mid-gray-color, 30%);    
   }  
 
   .c-headline-focus--animation {
@@ -33,11 +33,11 @@
     }
     10%  { 
       transform: scale(1.015,1.015); 
-      color: lighten($mid-gray, 15%);
+      color: lighten($mid-gray-color, 15%);
     }
     100% { 
       transform: scale(1,1); 
-      color: $mid-gray;
+      color: $mid-gray-color;
     }
   }
 

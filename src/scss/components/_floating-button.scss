@@ -5,19 +5,18 @@
   color: $body-bg-color;
   cursor: pointer;
   height: 4em;
-  visibility: hidden;
-  //padding: .75em .6em;
+  outline: none;
   position: absolute;
   right: -100px;
-  stroke: darken($first-color, 20%);
-  //text-align: center;    
-  transition: right .5s, background .3s;
+  stroke: darken($first-color, 20%);   
+  transition: all 2s, right .5s, top .5s, background 2s;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  visibility: hidden;
   width: 4em;  
   z-index: 1000;
 
   &:hover {
-    background: orange;
+    background: darken($first-color, 10%);
   }
 
   svg {
@@ -32,11 +31,24 @@
 }
 
 .c-floating-button--is-active {
+  display: block;  
+  visibility: visible;
   animation-name: floating-button-anim;
   animation-duration: 1.2s; 
   animation-iteration-count: infinite;
+}
+
+.c-floating-button--is-fixed {
+  animation-name: none;
+  background: $white-color;
+  color: $first-color;
   display: block;  
   visibility: visible;
+  transform: scale(.6);
+
+  &:hover {
+    background: $white-color;
+  }
 }
 
 
