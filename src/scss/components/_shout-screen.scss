@@ -6,6 +6,7 @@
   height: 100%;
   justify-content: center;
   left: 0;  
+  padding: 2em;
   position: fixed;
   right: 0;
   top: 0;
@@ -13,7 +14,32 @@
   z-index: 100;
 }
 
-.c-shout-screen__headline {
+.c-shout-screen__message {
   color: $white-color;
+  font-family: Exo, sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  //font-size: 2.2em;
+  //font-weight: 800; 
   text-align: center;
+
+  p {
+    line-height: 1.3;
+    margin: 0 0 .7em;
+
+    &:first-child {
+      font-size: 1.2em;
+      line-height: 1.1;
+      margin: 0 0 1em;
+    }
+
+    &:last-child {
+      font-size: .85em;
+      margin: 2em 0 1em;
+    }
+  }
+
+  b {
+    font-weight: 700;
+  }
 }

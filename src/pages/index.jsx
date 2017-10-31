@@ -31,18 +31,20 @@ class Index extends React.Component {
   }  
   
   positionFloatingButton() {
-    this.setState(() => ({
-      floatingButtonModifierClassName: '',
-      floatingButtonRight: `-100px`                                
-    })) 
-
-    setTimeout(() => {
+    if (this.state.floatingButtonModifierClassName !== 'c-floating-button--is-fixed' ) {
       this.setState(() => ({
-        floatingButtonModifierClassName: 'c-floating-button--is-active',
-        floatingButtonTop: `${this.subHeadline.offsetTop + (this.subHeadline.offsetHeight / 2) - (this.floatingButton.offsetHeight / 2)}px`,
-        floatingButtonRight: `${window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth - (this.floatingButton.offsetWidth * 1.5)}px`                                
-      }))       
-    }, 500);
+        floatingButtonModifierClassName: '',
+        floatingButtonRight: `-100px`                                
+      })) 
+
+      setTimeout(() => {
+        this.setState(() => ({
+          floatingButtonModifierClassName: 'c-floating-button--is-active',
+          floatingButtonTop: `${this.subHeadline.offsetTop + (this.subHeadline.offsetHeight / 2) - (this.floatingButton.offsetHeight / 2)}px`,
+          floatingButtonRight: `${window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth - (this.floatingButton.offsetWidth * 1.5)}px`                                
+        }))       
+      }, 500);
+    }
   }
 
   floatingButtonClickHandler() {
