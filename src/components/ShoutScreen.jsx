@@ -23,7 +23,7 @@ class ShoutScreen extends React.Component {
             Instantly, you realize that I could fit, drop me a message at <b>greglobinsk[at]gmail.com</b>.
           </p>
           <p>
-            Thank you. Now, you can go to...
+            Thank you. Now, you're free to go...
           </p>
           <div>
             <Link to="/playground/">Playground</Link>

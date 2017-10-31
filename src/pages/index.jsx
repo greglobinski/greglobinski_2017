@@ -31,7 +31,7 @@ class Index extends React.Component {
   }  
   
   positionFloatingButton() {
-    if (this.state.floatingButtonModifierClassName !== 'c-floating-button--is-fixed' ) {
+  //  if (this.state.floatingButtonModifierClassName !== 'c-floating-button--is-fixed' ) {
       this.setState(() => ({
         floatingButtonModifierClassName: '',
         floatingButtonRight: `-100px`                                
@@ -44,7 +44,7 @@ class Index extends React.Component {
           floatingButtonRight: `${window.innerWidth - this.subHeadline.offsetLeft - this.subHeadline.offsetWidth - (this.floatingButton.offsetWidth * 1.5)}px`                                
         }))       
       }, 500);
-    }
+    // }
   }
 
   floatingButtonClickHandler() {
