@@ -1,4 +1,4 @@
-.c-floating-button {  
+.c-action-button {  
   background: $first-color;
   border: none;
   border-radius: 100%;  
@@ -7,11 +7,10 @@
   height: 4em;
   outline: none;
   position: absolute;
-  right: -100px;
   stroke: darken($first-color, 20%);   
-  transition: all 2s, right .5s, top .5s, background 2s;
+  transition: right .5s, top .5s, background 2s;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  visibility: hidden;
+  //visibility: hidden;
   width: 4em;  
   z-index: 1000;
 
@@ -30,7 +29,7 @@
   }
 }
 
-.c-floating-button--is-active {
+.c-action-button--is-active {
   display: block;  
   visibility: visible;
   animation-name: floating-button-anim;
@@ -38,7 +37,7 @@
   animation-iteration-count: infinite;
 }
 
-.c-floating-button--is-fixed {
+.c-action-button--is-fixed {
   animation-name: none;
   background: $white-color;
   color: $first-color;

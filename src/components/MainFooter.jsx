@@ -4,9 +4,11 @@ import Link from 'gatsby-link';
 const MainFooter = () => (
   <div className="c-main-footer">
     <p className="c-main-footer__note">
-      Build with <a href="https://www.gatsbyjs.org">Gatsby</a> & <a href="https://reactjs.org">React</a>. 
-      Hosted on <a href="https://www.netlify.com/">Netlify</a>. 
-      The code is open and available on <a href="https://github.com">Github</a>.
+      Build with <a href="https://www.gatsbyjs.org" target="_blank">Gatsby</a> 
+      {' '} and <a href="https://reactjs.org">React</a>. 
+      Hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>. 
+      The code is open and available on 
+      <a href="https://github.com" target="_blank">Github</a>.
     </p>
   </div>
 );

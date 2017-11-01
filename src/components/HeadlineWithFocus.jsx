@@ -20,8 +20,8 @@ class HeadlineWithFocus extends React.Component {
     return (
         <h1 
           className={ `c-headline-focus
-                      ${this.props.modifierClassNames} 
-                      ${this.state.animationClassName}` } 
+            ${this.props.modifierClassNames} 
+            ${this.state.animationClassName}` } 
           ref="myImgContainer"
         >            
           { this.props.children }
