@@ -48,6 +48,7 @@ class DefaultLayout extends React.Component {
   }
   
   render() {
+    console.log(this.props);
     return (
       <div>
         <div className="l-page-container">
@@ -58,7 +59,7 @@ class DefaultLayout extends React.Component {
           </main>
           <MainFooter />
         </div>
-        <ActionButtonPositioner />    
+        {this.props.location.pathname === '/' && <ActionButtonPositioner />}    
       </div>
     )
   }  

@@ -89,11 +89,12 @@ class ActionButtonPositioner extends React.Component {
 
       this.updateButtonTop(buttonAnchor, actionButton, body, initialization);
       
-      // when the button position is updated for the first time, after page load,
-      // it splits the updating process into two steps, the second step, the
-      // update of buttonRight value is triggered only after the updating 
-      // the buttonTop value; thanks to that the button comes up on the page
-      // horizontaly. (css transition is applied only to the "right" value)
+      // when the button position is updated for the first time, after the page load,
+      // the script splits the updating process into two steps, the second step, a
+      // update of the state.buttonRightPx value is triggered only after the updating 
+      // of the state.buttonTopPx value; thanks to that split, the button comes up 
+      // on the page horizontaly. (css transition is applied only to the "right" value
+      // because only that value changes at that moment)
       if (!initialization) {
         this.updateButtonRight(buttonAnchor, actionButton, body);
       }  
