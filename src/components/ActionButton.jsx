@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 
 import { FaArrowRight, FaClose } from 'react-icons/lib/fa/';
 
-const ActionButton = ({ topPx, rightPx, classes, buttonRef }) => {  
+const ActionButton = ({ topPx, rightPx, classes, isActive, isFixed, buttonRef }) => {  
   //console.log(topPx, rightPx, classes); 
   return (
     <button 
-      className={ classes.block }
+      className={`
+        ${classes.block} 
+        ${isActive && classes.isActive} 
+        ${isFixed && classes.isFixed}
+      `}
       style={{ top: topPx, right: rightPx }}
       ref={buttonRef}
     > 

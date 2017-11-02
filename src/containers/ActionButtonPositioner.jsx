@@ -34,7 +34,9 @@ class ActionButtonPositioner extends React.Component {
     this.state = {
       buttonAnchor: null,
       buttonTopPx: '0px',
-      buttonRightPx: '-100px'
+      buttonRightPx: '-100px',
+      buttonIsActive: false,
+      buttonIsFixed: false
     };
   }
 
@@ -68,6 +70,13 @@ class ActionButtonPositioner extends React.Component {
   }  
 
   updateButtonPosition(initialization) {
+
+    if (initialization) {
+      this.setState(() => ({
+        buttonIsActive: true
+      }));
+    }
+
     let timeout;
 
     // prevents a function from being called every time window resizes
@@ -76,8 +85,9 @@ class ActionButtonPositioner extends React.Component {
     timeout = setTimeout(() => {    
       const buttonAnchor = this.state.buttonAnchor;
       const actionButton =  this.actionButton;
+      const body = document.querySelector('body');
 
-      this.updateButtonTop(buttonAnchor, actionButton, initialization);
+      this.updateButtonTop(buttonAnchor, actionButton, body, initialization);
       
       // when the button position is updated for the first time, after page load,
       // it splits the updating process into two steps, the second step, the
@@ -85,12 +95,12 @@ class ActionButtonPositioner extends React.Component {
       // the buttonTop value; thanks to that the button comes up on the page
       // horizontaly. (css transition is applied only to the "right" value)
       if (!initialization) {
-        this.updateButtonRight(buttonAnchor, actionButton);
+        this.updateButtonRight(buttonAnchor, actionButton, body);
       }  
-    }, 500);  
+    }, 300);  
   }
 
-  updateButtonTop(anchor, button, initialization) {
+  updateButtonTop(anchor, button, body, initialization) {
     const anchorOffsetTop = anchor.offsetTop;
     const anchorOffsetHeight = anchor.offsetHeight;
     const buttonOffsetHeight = button.offsetHeight;
@@ -102,18 +112,19 @@ class ActionButtonPositioner extends React.Component {
     }), () => { 
       if (initialization) {
         setTimeout(() => {   
-          return this.updateButtonRight(anchor, button); 
-        }, 500);
+          return this.updateButtonRight(anchor, button, body); 
+        }, 300);
       }
     });    
   }
 
-  updateButtonRight(anchor, button) {    
+  updateButtonRight(anchor, button, body) {    
     const anchorOffsetLest = anchor.offsetLeft;
     const anchorOffsetWidth = anchor.offsetWidth;
     const buttonOffsetWidth = button.offsetWidth;
+    const bodyWidth = body.offsetWidth;
 
-    const buttonRight = window.innerWidth - anchorOffsetLest - anchorOffsetWidth - (buttonOffsetWidth * 1.5);                   
+    const buttonRight = bodyWidth - anchorOffsetLest - anchorOffsetWidth - (buttonOffsetWidth * 1.5);                   
 
     this.setState(() => ({
       buttonRightPx: `${buttonRight}px`    
@@ -126,8 +137,12 @@ class ActionButtonPositioner extends React.Component {
         buttonRef={btn => this.actionButton = btn}
         topPx={this.state.buttonTopPx}
         rightPx={this.state.buttonRightPx}
+        isActive={this.state.buttonIsActive}
+        isFixed={this.state.buttonIsFixed}
         classes={{
-          block: 'c-action-button'
+          block: 'c-action-button',
+          isActive: 'c-action-button--is-active',
+          isFixed: 'c-action-button--is-fixed'
         }}
       />
     )

@@ -8,7 +8,7 @@ const MainFooter = () => (
       {' '} and <a href="https://reactjs.org">React</a>. 
       Hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>. 
       The code is open and available on 
-      <a href="https://github.com" target="_blank">Github</a>.
+      {' '}<a href="https://github.com" target="_blank">Github</a>.
     </p>
   </div>
 );
