@@ -1,13 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'; 
 
 import { toggleRemarkScreen } from '../state/actions';  
 import ActionButton from '../components/ActionButton';
 
 class ActionButtonContainer extends React.Component {
-  constructor(shoutScreenOpen) {
-    super();
+  constructor(props) {
+    super(props);
     this.getButtonAnchor = this.getButtonAnchor.bind(this);
     this.windowResizeHandler = this.windowResizeHandler.bind(this);
     this.getButtonAnchor = this.getButtonAnchor.bind(this);
@@ -47,11 +46,11 @@ class ActionButtonContainer extends React.Component {
         buttonIsActive: !remarkScreenIsActive,
         buttonIsFixed: remarkScreenIsActive,
         buttonTopPx: `${remarkScreenIsActive ? '20px' : prevState.buttonTopPx}`,
-        buttonRightPx: `${remarkScreenIsActive ? '20px' : prevState.buttonRightPx}`,        
+        buttonRightPx: `${remarkScreenIsActive ? '20px' : '-100px'}`,        
       }));
 
       if (!remarkScreenIsActive) {
-        this.updateButtonPosition();
+        this.updateButtonPosition(true);
       } 
     }
   }

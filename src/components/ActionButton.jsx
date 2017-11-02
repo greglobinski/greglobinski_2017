@@ -17,7 +17,7 @@ const ActionButton = ({ topPx, rightPx, classes, isActive, isFixed, onClick, but
       style={{ top: topPx, right: rightPx }}
       ref={buttonRef}
     > 
-      <FaArrowRight />
+      {isActive ? <FaArrowRight /> : <FaClose />}
     </button>
   )
 } 

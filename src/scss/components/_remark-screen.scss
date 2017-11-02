@@ -1,20 +1,23 @@
-.c-shout-screen {  
+.c-remark-screen {  
   background: $orange-color;
-  bottom: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
-  left: 0;  
+  left: 100%;  
+  min-height: 100vh;
   padding: 2em;
-  position: fixed;
-  right: 0;
+  position: absolute;
+  transition: .5s ease-out;
   top: 0;
   width: 100%;
   z-index: 100;
 }
 
-.c-shout-screen__message {
+.c-remark-screen--is-active {
+  left: 0;
+}
+
+.c-remark-screen__message {
   color: $white-color;
   font-family: Exo, sans-serif;
   //font-size: 1.1em;
