@@ -59,7 +59,7 @@ class DefaultLayout extends React.Component {
           </main>
           <MainFooter />
         </div>
-        <ActionButtonPositioner />
+        {(this.props.location.pathname === '/') && <ActionButtonPositioner />}
       </div>
     )
   }  
