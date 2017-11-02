@@ -21,5 +21,8 @@
     "typeface-exo": "^0.0.43",
     "typeface-roboto": "^0.0.43",
     "window-resize-listener-react": "^1.0.3"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.2"
   }
 }

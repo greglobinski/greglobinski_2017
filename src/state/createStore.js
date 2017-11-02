@@ -1,4 +1,5 @@
-import { createStore as reduxCreateStore } from 'redux';
+import { createStore as reduxCreateStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import * as types from './actionTypes';
 
 const reducer = (state, action) => {
@@ -38,6 +39,8 @@ const initialState = {
 const createStore = () => reduxCreateStore(
   reducer, 
   initialState, 
-  (typeof window !== 'undefined') && (window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+  composeWithDevTools(applyMiddleware())
 );
 export default createStore;
+
+
