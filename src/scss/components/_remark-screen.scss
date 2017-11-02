@@ -3,28 +3,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  left: 100%;  
+  right: -120%;  
   min-height: 100vh;
-  padding: 2em;
+  max-width: 100%;
+  padding: 5em 4.4em 5em 2.8em;
   position: absolute;
+  transform: skewX(-2deg);
   transition: .5s ease-out;
   top: 0;
-  width: 100%;
-  z-index: 100;
+  z-index: 90;  
 }
 
 .c-remark-screen--is-active {
-  left: 0;
+  right: -40px;
 }
 
 .c-remark-screen__message {
   color: $white-color;
   font-family: Exo, sans-serif;
-  //font-size: 1.1em;
   font-weight: 300;
-  //font-size: 2.2em;
-  //font-weight: 800; 
-  //text-align: center;
+  max-width: 30em;
 
   p {
     line-height: 1.4;

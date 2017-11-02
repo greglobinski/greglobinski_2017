@@ -15,43 +15,12 @@ import RemarkScreenContainer from '../containers/RemarkScreenContainer';
 import MainFooter from '../components/MainFooter'; 
 import MainHeader from '../components/MainHeader';
 
-const Counter = ({ count, increment }) =>  (
-  <div>
-    <p>Count: {count}</p>
-    <button onClick={increment}>Increment</button>
-  </div>
-)
-
-Counter.propTypes = {
-  count: PropTypes.number.isRequired,
-  increment: PropTypes.func.isRequired,
-}
-
-const counterMapStateToProps = ({ count }) => {
-  return { count }
-}
-
-const counterMapDispatchToProps = dispatch => {
-  return { increment: () => dispatch({ type: `INCREMENT` }) }
-}
-
-const ConnectedCounter = connect(
-  counterMapStateToProps, counterMapDispatchToProps)(Counter);
-
-
 class DefaultLayout extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
-  windowResizeHandler() {
-    console.log('windowResizeHandler()');    
-  }
-  
   render() {
     return (
       <div>
-        <div className="l-page-container">
+        <div className={`l-page-container ${this.props.remarkScreenisActive && 'is-blurred'}`}>
           <MainHeader />
           <main className="l-main">
             {this.props.children()}
@@ -59,10 +28,19 @@ class DefaultLayout extends React.Component {
           <MainFooter />
         </div>
         {this.props.location.pathname === '/' && <ActionButtonContainer />}  
-        <RemarkScreenContainer />
+        {this.props.location.pathname === '/' && <RemarkScreenContainer />}
       </div>
     )
   }  
 }
 
-export default DefaultLayout;
+const mapStateToProps = (state, ownProps) => {
+  return { remarkScreenisActive: state.remarkScreen.isActive };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return { };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DefaultLayout);
+

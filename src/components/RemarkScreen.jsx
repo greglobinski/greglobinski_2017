@@ -19,9 +19,6 @@ const RemarkScreen = (props) => (
       <p>
         Thank you. Now, you're free to go...
       </p>
-      <div>
-        <Link to="/playground/">Playground</Link>
-      </div>
     </div>
   </div>
 );

@@ -63,6 +63,10 @@ class ActionButtonContainer extends React.Component {
   }
     
   windowResizeHandler() {
+    if (this.props.remarkScreenIsActive) {
+      return false;
+    }
+
     if (!this.state.buttonAnchor) {
       return this.getButtonAnchor();
     }

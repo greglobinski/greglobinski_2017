@@ -12,7 +12,7 @@
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   //visibility: hidden;
   width: 4em;  
-  z-index: 1000;
+  z-index: 100;
 
   &:hover {
     background: darken($first-color, 10%);
@@ -33,8 +33,8 @@
   display: block;  
   visibility: visible;
   //animation-name: floating-button-anim;
-  //animation-duration: 1.2s; 
-  //animation-iteration-count: infinite;
+  animation-duration: 1.2s; 
+  animation-iteration-count: infinite;
   transform: scale(1);
 }
 
