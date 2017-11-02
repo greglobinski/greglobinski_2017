@@ -8,7 +8,7 @@
   outline: none;
   position: absolute;
   stroke: darken($first-color, 20%);   
-  transition: right .4s, top .4s, background 2s;
+  transition: transform .4s .3s, right .4s, top .4s, background .2s;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   //visibility: hidden;
   width: 4em;  
@@ -32,9 +32,10 @@
 .c-action-button--is-active {
   display: block;  
   visibility: visible;
-  animation-name: floating-button-anim;
-  animation-duration: 1.2s; 
-  animation-iteration-count: infinite;
+  //animation-name: floating-button-anim;
+  //animation-duration: 1.2s; 
+  //animation-iteration-count: infinite;
+  transform: scale(1);
 }
 
 .c-action-button--is-fixed {

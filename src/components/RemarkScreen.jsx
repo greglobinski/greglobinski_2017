@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-class ShoutScreen extends React.Component {
+class RemarkScreen extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -34,4 +34,4 @@ class ShoutScreen extends React.Component {
   }
 }
 
-export default ShoutScreen;
+export default RemarkScreen;

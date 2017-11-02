@@ -9,7 +9,7 @@ import '../scss/main.scss';
 require("typeface-exo");
 require("typeface-roboto");
 
-import ActionButtonPositioner from '../containers/ActionButtonPositioner';
+import ActionButtonContainer from '../containers/ActionButtonContainer';
 import MainFooter from '../components/MainFooter'; 
 import MainHeader from '../components/MainHeader';
 
@@ -37,7 +37,6 @@ const ConnectedCounter = connect(
   counterMapStateToProps, counterMapDispatchToProps)(Counter);
 
 
-
 class DefaultLayout extends React.Component {
   constructor(props) {
     super(props);
@@ -57,20 +56,10 @@ class DefaultLayout extends React.Component {
           </main>
           <MainFooter />
         </div>
-        {this.props.location.pathname === '/' && <ActionButtonPositioner />}  
+        {this.props.location.pathname === '/' && <ActionButtonContainer />}  
       </div>
     )
   }  
 }
 
 export default DefaultLayout;
-
-
-        //   <FloatingButton 
-        //     top={this.state.floatingButtonTop}
-        //     right={this.state.floatingButtonRight}
-        //     modifierClassName={this.state.floatingButtonModifierClassName}
-        //     buttonRef={(button) => { this.floatingButton = button; }}
-        //     onClick={this.floatingButtonClickHandler}
-        //   />       
-        //   { this.state.shoutScreenActive && <ShoutScreen /> }  

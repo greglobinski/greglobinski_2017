@@ -1,29 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'; 
+
+import { toggleRemarkScreen } from '../state/actions';  
 import ActionButton from '../components/ActionButton';
 
-/*
-const mapStateToProps = ({ floatingButton }) => {
-  return { 
-    topPx: floatingButton.topPx,
-    rightPx: floatingButton.rightPx,
-    classes: floatingButton.classes
-  };
-}
-
-const mapDispatchToProps = dispatch => {
-  return {}
-  //return { increment: () => dispatch({ type: `INCREMENT` }) };
-}
-
-*/
-
-
-//const ActionButtonPositioner = connect(
-//  mapStateToProps, mapDispatchToProps)(ActionButton);
-
-class ActionButtonPositioner extends React.Component {
-  constructor() {
+class ActionButtonContainer extends React.Component {
+  constructor(shoutScreenOpen) {
     super();
     this.getButtonAnchor = this.getButtonAnchor.bind(this);
     this.windowResizeHandler = this.windowResizeHandler.bind(this);
@@ -33,7 +16,7 @@ class ActionButtonPositioner extends React.Component {
     this.updateButtonRight = this.updateButtonRight.bind(this);
     this.state = {
       buttonAnchor: null,
-      buttonTopPx: '0px',
+      buttonTopPx: '-100px',
       buttonRightPx: '-100px',
       buttonIsActive: false,
       buttonIsFixed: false
@@ -54,6 +37,25 @@ class ActionButtonPositioner extends React.Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    const remarkScreenToggled = nextProps.remarkScreenIsActive !== this.props.remarkScreenIsActive;
+    const remarkScreenIsActive = nextProps.remarkScreenIsActive;
+
+    console.log(remarkScreenToggled, remarkScreenIsActive);
+    if (remarkScreenToggled) {
+      this.setState((prevState) => ({
+        buttonIsActive: !remarkScreenIsActive,
+        buttonIsFixed: remarkScreenIsActive,
+        buttonTopPx: `${remarkScreenIsActive ? '20px' : prevState.buttonTopPx}`,
+        buttonRightPx: `${remarkScreenIsActive ? '20px' : prevState.buttonRightPx}`,        
+      }));
+
+      if (!remarkScreenIsActive) {
+        this.updateButtonPosition();
+      } 
+    }
+  }
+
   getButtonAnchor() {
     const buttonAnchor = document.querySelector('.js-action-button-anchor');
     this.setState(() => ({
@@ -67,8 +69,8 @@ class ActionButtonPositioner extends React.Component {
     }
 
     this.updateButtonPosition();
-  }  
-
+  } 
+  
   updateButtonPosition(initialization) {
 
     if (initialization) {
@@ -133,8 +135,10 @@ class ActionButtonPositioner extends React.Component {
   }  
 
   render() {
+    //console.log(this.props);
     return (
       <ActionButton 
+        onClick={this.props.buttonClickHandler}
         buttonRef={btn => this.actionButton = btn}
         topPx={this.state.buttonTopPx}
         rightPx={this.state.buttonRightPx}
@@ -150,4 +154,13 @@ class ActionButtonPositioner extends React.Component {
   }
 }
 
-export default connect()(ActionButtonPositioner);
+
+const mapStateToProps = (state, ownProps) => {
+  return { remarkScreenIsActive: state.remarkScreen.isActive };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return { buttonClickHandler: () => dispatch(toggleRemarkScreen()) };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ActionButtonContainer);

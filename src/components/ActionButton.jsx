@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 
 import { FaArrowRight, FaClose } from 'react-icons/lib/fa/';
 
-const ActionButton = ({ topPx, rightPx, classes, isActive, isFixed, buttonRef }) => {  
-  //console.log(topPx, rightPx, classes); 
+const ActionButton = ({ topPx, rightPx, classes, isActive, isFixed, onClick, buttonRef }) => {  
+
   return (
     <button 
+      onClick={onClick}
       className={`
         ${classes.block} 
         ${isActive && classes.isActive} 
@@ -24,7 +25,9 @@ const ActionButton = ({ topPx, rightPx, classes, isActive, isFixed, buttonRef })
 ActionButton.propTypes = {
   topPx: PropTypes.string.isRequired,
   rightPx: PropTypes.string.isRequired,
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  isFixed: PropTypes.bool.isRequired
 }  
 
 export default ActionButton;
