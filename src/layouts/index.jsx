@@ -48,18 +48,16 @@ class DefaultLayout extends React.Component {
   }
   
   render() {
-    console.log('pathnamet:',this.props.location.pathname);
     return (
       <div>
         <div className="l-page-container">
-          {/* <ConnectedCounter /> */}
           <MainHeader />
           <main className="l-main">
             {this.props.children()}
           </main>
           <MainFooter />
         </div>
-        {(this.props.location.pathname === '/') && <ActionButtonPositioner />}
+        <ActionButtonPositioner />
       </div>
     )
   }  
