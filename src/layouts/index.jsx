@@ -48,11 +48,9 @@ class DefaultLayout extends React.Component {
   }
   
   render() {
-    console.log(this.props);
     return (
       <div>
         <div className="l-page-container">
-          {/* <ConnectedCounter /> */}
           <MainHeader />
           <main className="l-main">
             {this.props.children()}
