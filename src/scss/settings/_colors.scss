@@ -20,4 +20,4 @@ $nav-link-color: lighten($mid-gray-color, 20%);
 $nav-link-icon-color: lighten($nav-link-color, 20%);
 $nav-link-hover-bg-color: lighten($light-gray-color, 38%);
 $nav-link-active-color: $first-color;
-$nav-link-active-icon-color: lighten($nav-link-active-color, 20%);
+$nav-link-active-icon-color: $nav-link-active-color;

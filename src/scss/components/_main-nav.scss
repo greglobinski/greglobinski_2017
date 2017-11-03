@@ -51,7 +51,7 @@
   margin-left: .5em;
   
   svg {
-    color: $nav-link-active-icon-color;
+    color: lighten($nav-link-active-icon-color, 20%);
   }
 
   &:hover {

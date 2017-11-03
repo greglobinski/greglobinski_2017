@@ -33,23 +33,24 @@
   display: block;  
   visibility: visible;
   animation-name: floating-button-anim;
-  animation-delay: 2s;
+  animation-delay: .5s;
   animation-duration: 1.2s; 
   animation-iteration-count: infinite;
   transform: scale(1);
+
+  &:hover {
+    animation-name: none;
+  }
 }
 
 .c-action-button--is-fixed {
   animation-name: none;
-  background: $white-color;
-  color: $first-color;
+  //background: $white-color;
+  //color: $first-color;
   display: block;  
   visibility: visible;
   transform: scale(.6);
 
-  &:hover {
-    background: $white-color;
-  }
 }
 
 
