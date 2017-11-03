@@ -32,7 +32,8 @@
 .c-action-button--is-active {
   display: block;  
   visibility: visible;
-  //animation-name: floating-button-anim;
+  animation-name: floating-button-anim;
+  animation-delay: 2s;
   animation-duration: 1.2s; 
   animation-iteration-count: infinite;
   transform: scale(1);

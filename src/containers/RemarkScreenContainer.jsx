@@ -10,18 +10,9 @@ class RemarkScreenContainer extends React.Component {
 
   render() {
     return (
-      <div>
       <RemarkScreen
         isActive={this.props.isActive}
       />
-      <svg id="svg-filter" style={{ 
-        position: "absolute", top: "0", 
-        left: "0", width: "100%", height:"100%"}}>
-        <filter id="svg-blur">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
-        </filter>
-      </svg>
-      </div>
     )
   }
 }
