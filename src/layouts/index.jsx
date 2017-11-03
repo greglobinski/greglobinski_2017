@@ -19,7 +19,7 @@ class DefaultLayout extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="l-page-wrapper">
         <div className={`l-page-container ${this.props.remarkScreenisActive && 'is-blurred'}`}>
           <MainHeader />
           <main className="l-main">

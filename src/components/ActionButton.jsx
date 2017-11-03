@@ -11,11 +11,12 @@ const ActionButton = ({ topPx, rightPx, classes, isActive, isFixed, onClick, but
       onClick={onClick}
       className={`
         ${classes.block} 
-        ${isActive && classes.isActive} 
-        ${isFixed && classes.isFixed}
+        ${isActive ? classes.isActive : ''} 
+        ${isFixed ? classes.isFixed : ''}
       `}
       style={{ top: topPx, right: rightPx }}
       ref={buttonRef}
+      aria-label="Remark"
     > 
       {isActive ? <FaArrowRight /> : <FaClose />}
     </button>

@@ -15,14 +15,14 @@ class RemarkScreenContainer extends React.Component {
 
   initializeEscClosing() {
     if (typeof window !== 'undefined') {
-      window.addEventListener('keydown', () => {
-        if (this.props.isActive) {
+      window.addEventListener('keydown', (e) => {
+        if (this.props.isActive && e.which == 27) {
           this.props.toggleScreen();
         } 
       });
     } 
   }
-
+  
   render() {
     return (
       <div>

@@ -52,7 +52,13 @@ class ActionButtonContainer extends React.Component {
       if (!remarkScreenIsActive) {
         this.updateButtonPosition(true);
       } 
+
+      console.log(this.actionButton);      
     }
+  }
+
+  componentDidUpdate() {
+    this.actionButton.blur();
   }
 
   getButtonAnchor() {
