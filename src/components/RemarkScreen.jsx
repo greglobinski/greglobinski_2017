@@ -32,6 +32,7 @@ const RemarkScreen = (props) => {
         {
           links.map((link) => (        
             <Link 
+              key={link.path}
               className="c-remark-screen__link" 
               to={`/${link.path}/`}
               onClick={props.onClick}

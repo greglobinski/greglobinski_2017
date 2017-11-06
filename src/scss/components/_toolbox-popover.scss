@@ -1,0 +1,15 @@
+.c-toolbox-popover {
+  background: $first-color;
+  color: $white-color; 
+  font-family: Exo, sans-serif; 
+  min-height: 100px;
+  padding: .8em 1em;
+  position: absolute;
+  min-width: 200px;
+
+
+}
+
+.c-toolbox-popover__text {
+  line-height: 1.3em;
+}
