@@ -17,6 +17,7 @@
     "normalize.css": "^7.0.0",
     "react-icons": "^2.2.7",
     "react-redux": "^5.0.6",
+    "react-render-html": "^0.5.2",
     "redux": "^3.7.2",
     "typeface-exo": "^0.0.43",
     "typeface-roboto": "^0.0.43",

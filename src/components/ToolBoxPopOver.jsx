@@ -1,5 +1,5 @@
 import React from 'react';
-
+//import renderHTML from 'react-render-html';
 
 const ToolBoxPopOver = ({ top, bottom, left, right, modifierClasses, comment }) => {
   return (

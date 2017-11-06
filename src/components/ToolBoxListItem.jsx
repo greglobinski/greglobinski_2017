@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToolBoxListItem = ({ id, label, onClick, elevated }) => {
+const ToolBoxListItem = ({ id, label, onClick, activated }) => {
 
   function onClickHandler(e) {
     e.target.blur();
@@ -15,8 +15,10 @@ const ToolBoxListItem = ({ id, label, onClick, elevated }) => {
       <button 
         id={id}
         onClick={onClickHandler}
-        className="c-toolbox-list__btn"        
-        style={{ zIndex: elevated === id ? 1 : '' }}
+        className={
+          `c-toolbox-list__btn 
+          ${(activated === id) ? 'c-toolbox-list__btn--is-active' : ''}`}        
+        style={{ zIndex: activated === id ? 1 : '' }}
       >
         {label}
       </button>
@@ -25,3 +27,6 @@ const ToolBoxListItem = ({ id, label, onClick, elevated }) => {
 };
 
 export default ToolBoxListItem;
+
+
+//

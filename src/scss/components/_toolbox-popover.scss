@@ -1,15 +1,36 @@
 .c-toolbox-popover {
   background: $first-color;
   color: $white-color; 
-  font-family: Exo, sans-serif; 
-  min-height: 100px;
+  //font-family: Exo, sans-serif; 
+  margin: 1px 0;
+  max-width: 25em;
   padding: .8em 1em;
   position: absolute;
-  min-width: 200px;
-
-
 }
 
 .c-toolbox-popover__text {
-  line-height: 1.3em;
+  line-height: 1.4em;
+
+  a {
+    background: darken($first-color, 10%);
+    border: none;
+    color: $white-color;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: -.05em;
+    padding: .05em .3em;
+
+    &:hover {
+      background: darken($first-color, 20%);
+    }
+  }
+
+  i {
+    font-family: Exo, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    display: block;
+    margin-top: .5em;
+    line-height: 1.3em;
+  }
 }

@@ -6,14 +6,14 @@ class ToolBoxList extends React.Component {
     super(props);
     this.onClickHandler = this.onClickHandler.bind(this);
     this.state = {
-      elevatedItem: null
+      activatedItem: null
     }
   }  
   
   onClickHandler(e, id) {
     this.props.itemOnClick(e, id);
     this.setState(() => ({
-      elevatedItem: id
+      activatedItem: id
     }))
   }
 
@@ -27,7 +27,7 @@ class ToolBoxList extends React.Component {
             key={item.id}
             label={item.label}  
             onClick={this.onClickHandler} 
-            elevated={this.state.elevatedItem}   
+            activated={this.state.activatedItem}   
           />
         ))
       }
