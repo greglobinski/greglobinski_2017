@@ -25,12 +25,16 @@
     }
   }
 
-  i {
+  span {
     font-family: Exo, sans-serif;
     font-style: normal;
     font-weight: 300;
     display: block;
     margin-top: .5em;
     line-height: 1.3em;
+
+    b {
+      font-weight: 800;
+    }
   }
 }
