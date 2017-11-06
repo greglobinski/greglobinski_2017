@@ -122,7 +122,12 @@ class ToolBoxListContainer extends React.Component {
       offsetWidth:  e.target.offsetWidth,
       offsetHeight:  e.target.offsetHeight
     }
-    const popOver = this.state.items.find(el => el.id === id);
+    /*
+      check why the initial shape of the code does'n work in iPhone 4
+      it semas as array.find() function is not transpiled corectlyu
+      const popOver = this.state.items.find(el => el.id === id);
+    */
+    const popOver = this.state.items.filter(el => el.id === id)[0];
     this.positionPopOver(anchor, popOver);
   }
 
@@ -157,7 +162,7 @@ class ToolBoxListContainer extends React.Component {
         leftPx: leftPx,
         rightPx: rightPx,
         modifierClasses: `${positionUnderModifierClass}`,
-        comment: 'sadfadsfasdfasfas'
+        comment: popOver.comment
       }
     }));
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-//import renderHTML from 'react-render-html';
+import renderHTML from 'react-render-html';
 
 const ToolBoxPopOver = ({ top, bottom, left, right, modifierClasses, comment }) => {
   return (
@@ -13,7 +13,10 @@ const ToolBoxPopOver = ({ top, bottom, left, right, modifierClasses, comment }) 
       }}
     >
       <div className="c-toolbox-popover__text">
-        {comment}
+        {/*
+          TODO: find a lighter html renderer
+        */}
+        {renderHTML(comment)}
       </div>
     </div>
   )
