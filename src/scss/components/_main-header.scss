@@ -7,7 +7,24 @@
 }
 
 .c-main-header__logo {
+  border: 2px solid $white-color;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.1);
   float: left;
+  height: 36px;
+  overflow: hidden;
+  transition: all .3s;
+  width: 36px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+
+  img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .c-main-header__nav {

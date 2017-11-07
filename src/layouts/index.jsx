@@ -13,7 +13,7 @@ import ActionButtonContainer from '../containers/ActionButtonContainer';
 import RemarkScreenContainer from '../containers/RemarkScreenContainer';
 
 import MainFooter from '../components/MainFooter'; 
-import MainHeader from '../components/MainHeader';
+import MainHeader from '../components/MainHeader'; 
 
 class DefaultLayout extends React.Component {
 

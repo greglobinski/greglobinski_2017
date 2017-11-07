@@ -5,16 +5,10 @@ class ToolBoxList extends React.Component {
   constructor(props) {
     super(props);
     this.onClickHandler = this.onClickHandler.bind(this);
-    this.state = {
-      activatedItem: null
-    }
   }  
   
   onClickHandler(e, id) {
     this.props.itemOnClick(e, id);
-    this.setState(() => ({
-      activatedItem: id
-    }))
   }
 
   render() {
@@ -27,7 +21,7 @@ class ToolBoxList extends React.Component {
             key={item.id}
             label={item.label}  
             onClick={this.onClickHandler} 
-            activated={this.state.activatedItem}   
+            activated={this.props.activatedItem}   
           />
         ))
       }
