@@ -2,10 +2,18 @@ import React from 'react';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 
-import { FaArrowRight, FaClose } from 'react-icons/lib/fa/';
+import { FaArrowRight, FaClose, FaInfo } from 'react-icons/lib/fa/';
 
-const ActionButton = ({ topPx, rightPx, classes, isActive, isFixed, onClick, buttonRef }) => {  
-
+const ActionButton = ({ 
+  topPx, 
+  rightPx, 
+  classes, 
+  isActive, 
+  isFixed, 
+  onClick, 
+  buttonRef,
+  locationPathName }) => 
+{  
   return (
     <button 
       onClick={onClick}
@@ -18,7 +26,9 @@ const ActionButton = ({ topPx, rightPx, classes, isActive, isFixed, onClick, but
       ref={buttonRef}
       aria-label="Remark"
     > 
-      {isActive ? <FaArrowRight /> : <FaClose />}
+      {isActive 
+        ? (locationPathName === '/' ? <FaArrowRight /> : <FaInfo />) 
+        : <FaClose />}
     </button>
   )
 } 

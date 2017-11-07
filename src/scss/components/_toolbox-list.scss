@@ -36,5 +36,6 @@
 
   &:hover {
     background: $second-color;
+    color: darken($first-color, 20%);
   }
 }

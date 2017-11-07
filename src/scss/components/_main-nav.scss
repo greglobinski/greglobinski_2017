@@ -5,6 +5,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
   overflow: hidden;
   z-index: 10;
 }
@@ -85,7 +86,7 @@
   border-radius: .3em;
   background: $body-bg-color;
   flex-direction: column;
-  margin-top: -1px;
+  margin-top: -3px;
   padding: .5rem .7rem;
   position: absolute;
   right: 0;

@@ -7,7 +7,7 @@
   height: 4em;
   outline: none;
   position: absolute;
-  stroke: darken($first-color, 20%);   
+  stroke: lighten($first-color, 20%);   
   transition: transform .4s .3s, right .4s, top .4s, background .2s;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   width: 4em;  
@@ -19,7 +19,7 @@
 
   svg {
     height: 2.6em;
-    margin-top: -.2em;
+    margin: -.2em 0 0 0;
     width: 2.6em;
     position: absolute;
     top: 50%;

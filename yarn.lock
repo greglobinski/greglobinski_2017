@@ -4948,10 +4948,6 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-normalize.css@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-7.0.0.tgz#abfb1dd82470674e0322b53ceb1aaf412938e4bf"
-
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -6089,6 +6085,10 @@ react-icons@^2.2.7:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-2.2.7.tgz#d7860826b258557510dac10680abea5ca23cf650"
   dependencies:
     react-icon-base "2.1.0"
+
+react-obfuscate@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-obfuscate/-/react-obfuscate-1.1.1.tgz#09fb4f6e8c322ec62a9ee2351a1d3dcba387604c"
 
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"

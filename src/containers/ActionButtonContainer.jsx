@@ -22,7 +22,7 @@ class ActionButtonContainer extends React.Component {
     };
   }
 
-	componentDidMount() {    
+	componentDidMount() {  
     this.getButtonAnchor();
 
     if(typeof window !== 'undefined') {
@@ -40,7 +40,6 @@ class ActionButtonContainer extends React.Component {
     const remarkScreenToggled = nextProps.remarkScreenIsActive !== this.props.remarkScreenIsActive;
     const remarkScreenIsActive = nextProps.remarkScreenIsActive;
 
-    console.log(remarkScreenToggled, remarkScreenIsActive);
     if (remarkScreenToggled) {
       this.setState((prevState) => ({
         buttonIsActive: !remarkScreenIsActive,
@@ -51,14 +50,26 @@ class ActionButtonContainer extends React.Component {
 
       if (!remarkScreenIsActive) {
         this.updateButtonPosition(true);
-      } 
+      }    
+    }
 
-      console.log(this.actionButton);      
+    if (this.props.locationPathName !== nextProps.locationPathName) {
+      this.setState(() => ({
+        buttonAnchor: null,
+        buttonIsActive: false,
+        buttonIsFixed: false
+      }));      
     }
   }
 
-  componentDidUpdate() {
-    this.actionButton.blur();
+  componentDidUpdate() {  
+    if (!this.state.buttonAnchor)  {
+      this.getButtonAnchor();
+    }
+
+    if (this.state.buttonIsFixed) {
+      this.actionButton.blur();
+    }
   }
 
   getButtonAnchor() {
@@ -144,7 +155,6 @@ class ActionButtonContainer extends React.Component {
   }  
 
   render() {
-    //console.log(this.props);
     return (     
       <ActionButton 
         onClick={this.props.buttonClickHandler}
@@ -153,6 +163,7 @@ class ActionButtonContainer extends React.Component {
         rightPx={this.state.buttonRightPx}
         isActive={this.state.buttonIsActive}
         isFixed={this.state.buttonIsFixed}
+        locationPathName={this.props.locationPathName}
         classes={{
           block: 'c-action-button',
           isActive: 'c-action-button--is-active',

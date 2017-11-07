@@ -80,7 +80,7 @@ class ToolBoxListContainer extends React.Component {
           description: `A JavaScript <a href="https://reactjs.org/" target="_blank">library</a> for building user interfaces. 
             React makes it painless to create interactive UIs. Build encapsulated components 
             that manage their own state and then compose them to make complex UIs.`,
-          comment: `I used it once and fell in love.`  
+          comment: `I fell in love since the first use.`  
         },
         /*{ 
           id: 8, 
