@@ -32,11 +32,12 @@
   background: $second-color;
   border-radius: 0;
   color: $white-color;
+  cursor: default;
   z-index: 1;
 
   &:hover {
     background: $second-color;
-    color: darken($first-color, 20%);
+    color: $white-color;
   }
 }
 

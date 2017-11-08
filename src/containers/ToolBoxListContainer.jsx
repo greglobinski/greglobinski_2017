@@ -10,6 +10,7 @@ class ToolBoxListContainer extends React.Component {
     this.itemListOnClickHandler = this.itemListOnClickHandler.bind(this);
     this.popOverOnClickHandler = this.popOverOnClickHandler.bind(this);
     this.windowResizeHandler = this.windowResizeHandler.bind(this);
+    this.windowClickHandler = this.windowClickHandler.bind(this);
     this.state = {
       items: [
         { 
@@ -166,12 +167,16 @@ class ToolBoxListContainer extends React.Component {
 	componentDidMount() {    
     if(typeof window !== 'undefined') {
       window.addEventListener('resize', this.windowResizeHandler, false);
+      window.addEventListener('click', this.windowClickHandler, false);
+      window.addEventListener('touchstart', this.windowClickHandler, false);
     }    
   }
     
   componentWillUnmount() {
     if(typeof window !== 'undefined') {
       window.removeEventListener('resize', this.windowResizeHandler, false);
+      window.removeEventListener('click', this.windowClickHandler, false);
+      window.removeEventListener('touchstart', this.windowClickHandler, false);
     }
   }  
 
@@ -184,6 +189,14 @@ class ToolBoxListContainer extends React.Component {
       this.deactivatePopOver();
     }
   }   
+
+  windowClickHandler(e) {
+    const isButton = e.target.classList.contains('c-toolbox-list__btn');
+    
+    if (!isButton && this.state.activatedItem) {      
+      this.deactivatePopOver();
+    }
+  }
 
   itemListOnClickHandler(e, id) {
     const anchor = {
@@ -211,7 +224,6 @@ class ToolBoxListContainer extends React.Component {
     const popHeight = 100;
     const body = document.querySelector('body');
     
-
     const spaceUnder = body.offsetHeight - anchor.offsetTop - anchor.offsetHeight;
     const spaceOnRight = body.offsetWidth - anchor.offsetLeft - anchor.offsetWidth;
 
@@ -244,12 +256,6 @@ class ToolBoxListContainer extends React.Component {
 
   popOverOnClickHandler() {
     this.deactivatePopOver();
-    // this.setState(() => ({
-    //   popOver: {
-    //     isActive: false
-    //   },
-    //   activatedItem: null
-    // }));
   }
 
   deactivatePopOver() {
