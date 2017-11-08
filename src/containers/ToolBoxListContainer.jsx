@@ -77,7 +77,7 @@ class ToolBoxListContainer extends React.Component {
           id: 19, 
           label: 'Github',
           description: `A web-based Git version control repository hosting service.`,
-          comment: `That's my <a href="/" target="_blank">Github</a>`
+          comment: `That's my <a href="https://github.com/greglobinski" target="_blank">Github</a>`
         },        
         { 
           id: 7, 
