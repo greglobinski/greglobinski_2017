@@ -31,7 +31,7 @@ That's the code of my website (www.greglobinski.com)
 
 
 
-### Instalation
+## Instalation
 
 1. [Install gatsby-cli](https://www.gatsbyjs.org/tutorial/part-one/#install-the-hello-world-starter)
 2. Clone the repository to your localhost
@@ -50,5 +50,5 @@ gatsby develp
 
 
     
-### Screenshots
+## Screenshots
 ![](static/assets/readme-screens.png)
