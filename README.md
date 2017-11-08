@@ -9,9 +9,11 @@ That's the code of my website (www.greglobinski.com)
 * [React](https://github.com/facebook/react)
 
 
+
 ### Starting point
 
 * [gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world)
+
 
 
 ### Additional plugins and packages
@@ -28,10 +30,11 @@ That's the code of my website (www.greglobinski.com)
 * [Exo and Roboto fonts through typefaces](https://github.com/KyleAMathews/typefaces)
 
 
+
 ### Instalation
 
 1. [Install gatsby-cli](https://www.gatsbyjs.org/tutorial/part-one/#install-the-hello-world-starter)
-2. [Clone the repository to your localhost](https://github.com/greglobinski/playground)
+2. Clone the repository to your localhost
 ```
 git clone git@github.com:greglobinski/playground.git new-folder
 ```
@@ -43,6 +46,9 @@ yarn install
 ```
 gatsby develp
 ```
+5. Have fun.
+
+
     
 ### Screenshots
 ![](static/assets/readme-screens.png)
