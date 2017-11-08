@@ -43,16 +43,6 @@
   position: absolute;
   top: -1px;
   left: 0;
-  border: 2px solid darken($first-color, 20%);
-  border-radius: 50%;
-  height: 24px;
-  overflow: hidden;
-  width: 24px;    
-
-  img {
-    height: auto;
-    width: 100%;
-  }
 }
 
 .c-toolbox-popover__comment {

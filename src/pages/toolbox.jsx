@@ -4,7 +4,7 @@ import ToolBoxListContainer from '../containers/ToolBoxListContainer';
 
 export default () => (
   <div className="c-content-box">
-    <HeadlineWithFocus>These are pieces of my toolbox</HeadlineWithFocus>
+    <HeadlineWithFocus><span>These are pieces of </span>my toolbox</HeadlineWithFocus>
     <ToolBoxListContainer />
   </div>
 );

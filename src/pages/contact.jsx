@@ -6,7 +6,7 @@ import { FaEnvelopeO, FaTwitter, FaGithub } from 'react-icons/lib/fa/';
 export default (props) => {
   return ( 
     <div className="c-content-box">
-      <HeadlineWithFocus>You can get in touch throug:</HeadlineWithFocus>
+      <HeadlineWithFocus>You can get in touch <span>anytime throug</span></HeadlineWithFocus>
       <ul className="c-contact-list">
         <li className="c-contact-list__item">
           <FaEnvelopeO />

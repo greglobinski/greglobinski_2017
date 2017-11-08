@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaClose } from 'react-icons/lib/fa/';
-import logo from './../images/logo24.jpg'; 
+import { FaClose } from 'react-icons/lib/fa/'; 
+import Avatar from '../components/Avatar';
 
 const ToolBoxPopOver = ({ 
   top, 
@@ -35,7 +35,9 @@ const ToolBoxPopOver = ({
         {comment &&
           <div className="c-toolbox-popover__footer">
             <div className="c-toolbox-popover__avatar">
-              <img src={logo} alt="greglobinski.com" />
+              <Avatar 
+                modifierClasses="c-avatar--as-author"
+              />
             </div>  
             <span 
               className="c-toolbox-popover__comment" 

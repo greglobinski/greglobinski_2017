@@ -1,0 +1,22 @@
+.c-avatar {  
+  border-radius: 50%;
+  overflow: hidden;  
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.c-avatar--as-logo {
+  border: 2px solid $white-color;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+  height: 36px;
+  width: 36px;
+}
+
+.c-avatar--as-author {
+  border: 2px solid darken($first-color, 20%);
+  height: 24px;
+  width: 24px;  
+}
