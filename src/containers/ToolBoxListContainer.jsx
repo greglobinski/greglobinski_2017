@@ -158,7 +158,8 @@ class ToolBoxListContainer extends React.Component {
         rightPx: 'auto',
         description: '',
         comment: ''
-      }
+      },
+      popOverPosition: null
     }
   }
 
@@ -236,7 +237,8 @@ class ToolBoxListContainer extends React.Component {
         modifierClasses: `${positionUnderModifierClass}`,
         description: popOver.description,
         comment: popOver.comment
-      }
+      },
+      popOverPosition: verticalPositionUnder ? 'under' : 'above'
     }));
   }
 
@@ -256,7 +258,8 @@ class ToolBoxListContainer extends React.Component {
       popOver: {
         isActive: false
       },
-      activatedItem: null
+      activatedItem: null,
+      popOverPosition: null
     }));
   }  
 
@@ -267,6 +270,7 @@ class ToolBoxListContainer extends React.Component {
           items={this.state.items} 
           activatedItem={this.state.activatedItem}
           itemOnClick={this.itemListOnClickHandler} 
+          popOverPosition={this.state.popOverPosition}
         />
         {this.state.popOver.isActive && 
         <ToolBoxPopOver 

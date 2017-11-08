@@ -39,3 +39,34 @@
     color: darken($first-color, 20%);
   }
 }
+
+.c-toolbox-list__btn--is-above, .c-toolbox-list__btn--is-under {
+  &::before {
+    background: $orange-color;
+    border: 1px solid $white-color;
+    content: '';
+    height: 10px;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 10px;
+    z-index: -1;    
+  }
+}
+
+.c-toolbox-list__btn--is-above {
+  &::before {
+    border-left: none;
+    border-top: none;
+    bottom: -6px;   
+  }
+}
+.c-toolbox-list__btn--is-under {
+  
+  &::before {
+    border-right: none;
+    border-bottom: none;
+    top: -6px; 
+  }  
+}

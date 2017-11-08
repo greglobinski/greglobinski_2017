@@ -21,7 +21,8 @@ class ToolBoxList extends React.Component {
             key={item.id}
             label={item.label}  
             onClick={this.onClickHandler} 
-            activated={this.props.activatedItem}   
+            activated={this.props.activatedItem}
+            popOverPosition={this.props.popOverPosition}   
           />
         ))
       }
