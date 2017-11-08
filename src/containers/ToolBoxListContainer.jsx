@@ -170,22 +170,16 @@ class ToolBoxListContainer extends React.Component {
 
 	componentDidMount() {    
     if(typeof window !== 'undefined') {
-      window.addEventListener('resize', this.windowResizeHandler, false);
-      
-      window.addEventListener('click', this.windowClickHandler, false);
-      window.addEventListener('touchstart', this.windowClickHandler, false);
-      
+      window.addEventListener('resize', this.windowResizeHandler, false);      
+      window.addEventListener('click', this.windowClickHandler, false);      
       window.addEventListener('keydown', this.windowKeyDownHandler, false);
     }    
   }
     
   componentWillUnmount() {
     if(typeof window !== 'undefined') {
-      window.removeEventListener('resize', this.windowResizeHandler, false);
-      
-      window.removeEventListener('click', this.windowClickHandler, false);
-      window.removeEventListener('touchstart', this.windowClickHandler, false);
-      
+      window.removeEventListener('resize', this.windowResizeHandler, false);      
+      window.removeEventListener('click', this.windowClickHandler, false);      
       window.removeEventListener('keydown', this.windowKeyDownHandler, false);      
     }
   }  
@@ -207,10 +201,10 @@ class ToolBoxListContainer extends React.Component {
   }     
 
   windowClickHandler(e) {
-    const isValidClickTarget = (e.target.nodeName === 'A' || e.target.nodeName === 'BUTTON') ? true : false;
-    
+    console.log(e);
+    const isValidClickTarget = (e.target.nodeName === 'A' || e.target.nodeName === 'BUTTON') ? true : false;    
     if (!isValidClickTarget && this.state.activatedItem) {      
-      setTimeout(this.deactivatePopOver, 50);
+      this.deactivatePopOver();
     }
   }
 
