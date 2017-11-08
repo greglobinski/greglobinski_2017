@@ -35,17 +35,8 @@ That's the code of my website (www.greglobinski.com)
 
 1. Install gatsby-cli ([docs](https://www.gatsbyjs.org/tutorial/part-one/#install-the-hello-world-starter))
 2. Clone the repository to your localhost
-```
-git clone git@github.com:greglobinski/playground.git new-folder
-```
-3. Install dependencies 
-```
-yarn install
-```
-4. Run in developement ([docs](https://www.gatsbyjs.org/docs/))
-```
-gatsby develp
-```
+3. Install dependencies (yarn install)
+4. Use gatsby-cli to start in develop mode ([docs](https://www.gatsbyjs.org/docs/))
 5. Have fun.
 
 
