@@ -7,10 +7,13 @@ import FaUser from 'react-icons/lib/fa/user';
 class ToolBoxListContainer extends React.Component {
   constructor(props) {
     super(props);
+    
     this.itemListOnClickHandler = this.itemListOnClickHandler.bind(this);
     this.popOverOnClickHandler = this.popOverOnClickHandler.bind(this);
     this.windowResizeHandler = this.windowResizeHandler.bind(this);
     this.windowClickHandler = this.windowClickHandler.bind(this);
+    this.windowKeyDownHandler = this.windowKeyDownHandler.bind(this);
+    
     this.state = {
       items: [
         { 
@@ -167,16 +170,22 @@ class ToolBoxListContainer extends React.Component {
 	componentDidMount() {    
     if(typeof window !== 'undefined') {
       window.addEventListener('resize', this.windowResizeHandler, false);
+      
       window.addEventListener('click', this.windowClickHandler, false);
       window.addEventListener('touchstart', this.windowClickHandler, false);
+      
+      window.addEventListener('keydown', this.windowKeyDownHandler, false);
     }    
   }
     
   componentWillUnmount() {
     if(typeof window !== 'undefined') {
       window.removeEventListener('resize', this.windowResizeHandler, false);
+      
       window.removeEventListener('click', this.windowClickHandler, false);
       window.removeEventListener('touchstart', this.windowClickHandler, false);
+      
+      window.removeEventListener('keydown', this.windowKeyDownHandler, false);      
     }
   }  
 
@@ -184,11 +193,17 @@ class ToolBoxListContainer extends React.Component {
     //
   }
 
+  windowKeyDownHandler(e) {
+    if (this.state.activatedItem && e.which == 27) {
+      this.deactivatePopOver();
+    } 
+  }
+
   windowResizeHandler() {
     if (this.state.activatedItem) {
       this.deactivatePopOver();
     }
-  }   
+  }     
 
   windowClickHandler(e) {
     const isButton = e.target.classList.contains('c-toolbox-list__btn');
@@ -259,7 +274,6 @@ class ToolBoxListContainer extends React.Component {
   }
 
   deactivatePopOver() {
-    console.log('deactivatePopOver()');
     this.setState(() => ({
       popOver: {
         isActive: false
