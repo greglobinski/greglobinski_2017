@@ -42,7 +42,7 @@ git clone git@github.com:greglobinski/playground.git new-folder
 ```
 yarn install
 ```
-4. Run
+4. Run in developement ([Gatsby docs](https://www.gatsbyjs.org/docs/))
 ```
 gatsby develp
 ```
