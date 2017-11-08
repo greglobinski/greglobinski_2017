@@ -3,6 +3,12 @@
 That's the code of my website (www.greglobinski.com). My first production-use of the Gatsby-React tandem.
 
 
+
+## Screenshots
+![](static/assets/readme-screens.png)
+
+
+
 ### Build with
 
 * [Gatsby](https://github.com/gatsbyjs/gatsb)
@@ -40,6 +46,3 @@ That's the code of my website (www.greglobinski.com). My first production-use of
 5. Have fun.
 
 
-    
-## Screenshots
-![](static/assets/readme-screens.png)
