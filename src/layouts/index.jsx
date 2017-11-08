@@ -20,10 +20,10 @@ class DefaultLayout extends React.Component {
       <div className="l-page-wrapper">
         <Helmet
           title="I am a front-end developer"
-          meta={{ 
+          meta={[{ 
             name: 'description', 
             content: `I build web interfaces using: JavaScrip, ES2015, Babel, HTML5, CSS, CSS3, BEM, React, Gatsby, Webpack ...` 
-          }}
+          }]}
         />    
           
         <div className={`l-page-container ${this.props.remarkScreenisActive && 'is-blurred'}`}>

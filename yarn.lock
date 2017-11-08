@@ -1647,10 +1647,6 @@ class-utils@^0.3.5:
     lazy-cache "^2.0.2"
     static-extend "^0.1.1"
 
-classnames@^2.1.2:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
-
 cli-cursor@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
@@ -7926,12 +7922,6 @@ wide-align@^1.1.0:
   resolved "https://registry.yarnpkg.com/wide-align/-/wide-align-1.1.2.tgz#571e0f1b0604636ebc0dfc21b0339bbe31341710"
   dependencies:
     string-width "^1.0.2"
-
-window-resize-listener-react@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/window-resize-listener-react/-/window-resize-listener-react-1.0.3.tgz#310c4dad773956d78a9cafac9abddee3cee490fc"
-  dependencies:
-    classnames "^2.1.2"
 
 window-size@0.1.0:
   version "0.1.0"
