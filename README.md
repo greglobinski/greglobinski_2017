@@ -26,6 +26,25 @@ That's the code of my website (www.greglobinski.com)
 * [react-obfuscate](https://github.com/coston/react-obfuscate)
 * [Exo and Roboto fonts through typefaces](https://github.com/KyleAMathews/typefaces)
 
+### Instalation
+
+1. [Install gatsby-cli](https://www.gatsbyjs.org/tutorial/part-one/#install-the-hello-world-starter)
+2. [Clone the repository to your localhost](https://github.com/greglobinski/playground)
+
+    git clone git@github.com:greglobinski/playground.git new-folder
+
+3. Install dependencies 
+
+    yarn install
+
+4. Run
+
+    gatsby develp
+
+    
+
+
+
 
 ### Screenshots
 ![](static/assets/readme-screens.png)
