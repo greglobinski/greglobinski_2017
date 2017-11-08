@@ -2,10 +2,13 @@ import React from "react";
 import HeadlineWithFocus from '../components/HeadlineWithFocus';
 import Obfuscate from 'react-obfuscate';
 import { FaEnvelopeO, FaTwitter, FaGithub } from 'react-icons/lib/fa/';
+import Helmet from 'react-helmet';
 
 export default (props) => {
   return ( 
     <div className="c-content-box">
+      <Helmet title="Contact me" />     
+
       <HeadlineWithFocus>You can get in touch <span>anytime throug</span></HeadlineWithFocus>
       <ul className="c-contact-list">
         <li className="c-contact-list__item">

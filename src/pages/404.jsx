@@ -1,16 +1,11 @@
 import React from "react";
 import HeadlineWithFocus from '../components/HeadlineWithFocus';
-import Helmet from 'react-helmet';
 
 export default () => (
   <div className="c-content-box">
-    <Helmet title="Let's play" />
-
     <HeadlineWithFocus>
-      Playground 
-      {/*<span>What's that?</span>*/}
+      404
     </HeadlineWithFocus>
-    <h2></h2>
-    <p>Coming soon...</p>
+    <p>There is no page you are looking for.</p>
   </div>
 );

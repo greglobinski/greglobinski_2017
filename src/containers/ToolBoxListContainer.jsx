@@ -210,7 +210,6 @@ class ToolBoxListContainer extends React.Component {
     const isValidClickTarget = (e.target.nodeName === 'A' || e.target.nodeName === 'BUTTON') ? true : false;
     
     if (!isValidClickTarget && this.state.activatedItem) {      
-      //this.deactivatePopOver();
       setTimeout(this.deactivatePopOver, 50);
     }
   }
