@@ -28,7 +28,7 @@ export default (props) => {
         c-content-box__subheadline--with-button
       `}
       >
-        Do you remember?
+        Do not forget
       </h2>      
     </div>
   )

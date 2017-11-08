@@ -50,6 +50,11 @@
     //font-size: 1.1em;
     font-weight: 700;
   }
+
+  a {
+    color: $white-color;
+    border-color: $white-color;
+  }
 }
 
 .c-remark-screen__links {

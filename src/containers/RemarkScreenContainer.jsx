@@ -28,6 +28,7 @@ class RemarkScreenContainer extends React.Component {
       <div>
         <RemarkScreen
           isActive={this.props.isActive}
+          locationPathName={this.props.locationPathName}
           onClick={this.props.toggleScreen}
         />
         {this.props.isActive && <div 
