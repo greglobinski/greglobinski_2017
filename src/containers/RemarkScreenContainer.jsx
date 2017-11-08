@@ -32,7 +32,7 @@ class RemarkScreenContainer extends React.Component {
         />
         {this.props.isActive && <div 
             onClick={this.props.toggleScreen}
-            className="c-remark-screen-bg"
+            className="c-remark-screen-overlay"
           >
           </div>}
       </div>

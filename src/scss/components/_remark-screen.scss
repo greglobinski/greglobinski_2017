@@ -5,10 +5,9 @@
   justify-content: center;
   right: -120%;  
   min-height: 100vh;
-  max-width: 100%;
-  padding: 5em 4.4em 5em 2.5em;
+  max-width: 80%;
+  padding: 2em 2.5em 0 1.6em;
   position: absolute;
-  transform: skewX(-2deg);
   transition: .5s ease-out;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   top: 0;
@@ -16,7 +15,7 @@
 }
 
 .c-remark-screen--is-active {
-  right: -40px;
+  right: 0px;
 }
 
 .c-remark-screen__message {
@@ -78,8 +77,19 @@
   }
 }
 
+.c-remark-screen__bg {
+  background: $orange-color;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 100px;
+  height: 100%;   
+  transform: skewX(-2deg);
+  z-index: -1;
+}
 
-.c-remark-screen-bg {
+.c-remark-screen-overlay {
+  background: none;
   left: 0;
   height: 100vh;
   position: absolute;
@@ -87,11 +97,9 @@
   width: 100%;
 }
 
-
-
 @media screen and (min-width: $media-width-S) {
   .c-remark-screen {
-    padding: 5em 6em 5em 3em;
+    padding: 2.5em 2.5em 0 1.8em;
   }
   .c-remark-screen__message {
     font-size: 1em;

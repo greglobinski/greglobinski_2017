@@ -43,6 +43,8 @@ const RemarkScreen = (props) => {
           ) 
         }
       </div>
+
+      <div className="c-remark-screen__bg"></div>
     </div>
   )
 };
