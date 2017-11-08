@@ -13,6 +13,7 @@ class ToolBoxListContainer extends React.Component {
     this.windowResizeHandler = this.windowResizeHandler.bind(this);
     this.windowClickHandler = this.windowClickHandler.bind(this);
     this.windowKeyDownHandler = this.windowKeyDownHandler.bind(this);
+    this.deactivatePopOver = this.deactivatePopOver.bind(this);
     
     this.state = {
       items: [
@@ -206,10 +207,11 @@ class ToolBoxListContainer extends React.Component {
   }     
 
   windowClickHandler(e) {
-    const isButton = e.target.classList.contains('c-toolbox-list__btn');
+    const isValidClickTarget = (e.target.nodeName === 'A' || e.target.nodeName === 'BUTTON') ? true : false;
     
-    if (!isButton && this.state.activatedItem) {      
-      this.deactivatePopOver();
+    if (!isValidClickTarget && this.state.activatedItem) {      
+      //this.deactivatePopOver();
+      setTimeout(this.deactivatePopOver, 50);
     }
   }
 
