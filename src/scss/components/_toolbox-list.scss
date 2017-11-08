@@ -42,22 +42,29 @@
 }
 
 .c-toolbox-list__btn--is-above, .c-toolbox-list__btn--is-under {
-  &::before {
+
+  &::before {    
+    animation-duration: .3s;
+    animation-delay: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     background: $orange-color;
     border: 1px solid $white-color;
     content: '';
     height: 10px;
     left: 50%;
     margin-left: -5px;
+    opacity: 0; 
     position: absolute;
     transform: rotate(45deg);
     width: 10px;
-    z-index: -1;    
+    z-index: -1;
   }
 }
 
 .c-toolbox-list__btn--is-above {
   &::before {
+    animation-name: arrow-on-above;
     border-left: none;
     border-top: none;
     bottom: -6px;   
@@ -66,8 +73,49 @@
 .c-toolbox-list__btn--is-under {
   
   &::before {
+    animation-name: arrow-on-under;
     border-right: none;
     border-bottom: none;
     top: -6px; 
+  }  
+}
+
+@keyframes arrow-on-above {
+  0% {
+    bottom: 0;
+    border: none;
+    opacity: 1;
+  }
+  90% {
+    bottom: -6px;
+    border: none;
+    opacity: 1;
+  }
+  100% {
+    bottom: -6px;
+    border: 1px solid $white-color;
+    border-left: none;
+    border-top: none;
+    opacity: 1;
+  }  
+}
+
+@keyframes arrow-on-under {
+  0% {
+    top: 0;
+    border: none;
+    opacity: 1;
+  }
+  90% {
+    top: -6px;
+    border: none;
+    opacity: 1;
+  }
+  100% {
+    top: -6px;
+    border: 1px solid $white-color;
+    border-right: none;
+    border-bottom: none;
+    opacity: 1;
   }  
 }
