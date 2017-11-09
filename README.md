@@ -1,6 +1,6 @@
-# Greg's playground
+# greglobinski.com
 
-That's the code of my website (www.greglobinski.com). My first production-use of the Gatsby-React tandem.
+That's the code of my website (greglobinski.com). My first production-use of the Gatsby-React tandem.
 
 
 
