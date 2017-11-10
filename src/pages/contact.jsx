@@ -19,11 +19,23 @@ export default props => {
         </li>
         <li className="c-contact-list__item">
           <FaTwitter />
-          <a href="https://twitter.com/greglobinski">@greglobinski</a>
+          <a
+            href="https://twitter.com/greglobinski"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @greglobinski
+          </a>
         </li>
         <li className="c-contact-list__item">
           <FaGithub />
-          <a href="https://github.com/greglobinski">greglobinski</a>
+          <a
+            href="https://github.com/greglobinski"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            greglobinski
+          </a>
         </li>
       </ul>
       <h2
