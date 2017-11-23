@@ -40,7 +40,7 @@ class ToolBoxListContainer extends React.Component {
           label: 'Babel',
           description: `A <a href="https://babeljs.io/" target="_blank">transpiler</a> for JavaScript 
             best known for its ability to turn ES2015 into code that runs in browsers 
-            which does not support it directly. It lets us to  use next generation 
+            which does not support it directly. It lets us use next generation 
             JavaScript, today.`,
           comment: `That's a <b>must-have</b> tool.`
         },        
@@ -58,7 +58,7 @@ class ToolBoxListContainer extends React.Component {
           description: `Cascading Style Sheets - a style sheet 
             <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">language</a> 
             used for describing the presentation of a document written in HTML.`,
-          comment: `CSS make web beautifull.`  
+          comment: `CSS makes the web beautiful.`  
         },
         { 
           id: 5, 
@@ -85,7 +85,7 @@ class ToolBoxListContainer extends React.Component {
           description: `A JavaScript <a href="https://reactjs.org/" target="_blank">library</a> for building user interfaces. 
             React makes it painless to create interactive UIs. Build encapsulated components 
             that manage their own state and then compose them to make complex UIs.`,
-          comment: `I fell in love since the first use.`  
+          comment: `I've been in love since using it for the first time.`  
         },
         /*{ 
           id: 8, 
@@ -98,7 +98,7 @@ class ToolBoxListContainer extends React.Component {
           description: `A static PWA (Progressive Web App) 
             <a href="https://www.gatsbyjs.org/" target="_blank">generator</a>. Gatsby lets 
             you build blazing-fast sites with your data, whatever the source.`,
-          comment: `The website you are looking at now is build with Gatsby.`  
+          comment: `The website you are looking at now is built with Gatsby.`  
         },
         { id: 10, 
           label: 'Angular 2+',
@@ -136,22 +136,22 @@ class ToolBoxListContainer extends React.Component {
           label: 'Wordpress',
           description: `The largest self-hosted <a href="https://wordpress.org/" target="_blank">blogging tool</a>
             in the world, used on millions of sites.`,
-          comment: `I've build some websites using it. Like this 
-            <a href="http://polishlanguage.dlachetnych.pl/" target="_blank">one</a> or 
-            <a href="http://lab.gregloby.com/" target="_blank">that</a>.`  
+          comment: `I've built some websites using it. Like  
+            <a href="http://polishlanguage.dlachetnych.pl/" target="_blank">this</a> one or 
+            <a href="http://lab.gregloby.com/" target="_blank">that</a> one.`  
         },
         { 
           id: 16, 
           label: 'Drupal',
           description: `An open source content-management framework written in PHP.`,
-          comment: `I build exactly one <a href="http://babelvillage.com/" target="_blank">site</a> with Drupal 7.`  
+          comment: `I built exactly one <a href="http://babelvillage.com/" target="_blank">site</a> with Drupal 7.`  
         },
         { 
           id: 17, 
           label: 'PHP',
           description: `A server-side scripting <a href="http://php.net/" target="_blank">language</a> designed primarily 
             for web development but also used as a general-purpose programming language.`,
-          comment: `Recently, my only contact with PHP is when theming WP.`  
+          comment: `Currently, my only contact with PHP is when theming WP.`  
         },
       ],
       activatedItem: null,
