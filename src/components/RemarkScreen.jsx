@@ -6,16 +6,16 @@ import { FaPaperPlaneO, FaWrench } from 'react-icons/lib/fa';
 const ForHomePageContent = (
   <div className="c-remark-screen__message">
     <p>
-      <b>I'm glad</b><br /> seeing you interested in my stuff.
+      <b>I'm glad</b><br /> that you're interested in my stuff.
     </p>
     <p>
-      There's a thing I want you to rember going over the website.
+      There's something I want you to remember while you're going over the website.
     </p>
     <p>
       At present, I'm open to <b>full time on-site job</b> offers (Warsaw or London).
     </p>
     <p>
-      Instantly, you realize that I could fit, drop me 
+      If you realize that I would be a good fit, drop me 
       a message at <b><Obfuscate email='greglobinski@gmail.com' /></b>.
     </p>
     <p>
@@ -30,10 +30,10 @@ const ForContactPageContent = (
       <b>Hi there</b><br /> Before you leave
     </p>
     <p>
-      I want you to remember, that at present, I am open to <b>full time on-site job</b> offers (Warsaw or London).
+      I want you to remember that at present, I am open to <b>full time on-site job</b> offers (Warsaw or London).
     </p>
     <p>
-      If you feel, that you want me in your team, drop me 
+      If you feel that you want me on your team, drop me 
       a message at <b><Obfuscate email='greglobinski@gmail.com' /></b>.
     </p>
     <p>

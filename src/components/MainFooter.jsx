@@ -22,7 +22,7 @@ const MainFooter = () => (
         rel="noopener noreferrer"
       >
         Netlify
-      </a>. The code is open source and available on{" "}
+      </a>. The code is open source and available at{" "}
       <a
         href="https://github.com/greglobinski/playground"
         target="_blank"

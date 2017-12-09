@@ -11,7 +11,7 @@ That's the code of my website (greglobinski.com). My first production-use of the
 
 ### Build with
 
-* [Gatsby](https://github.com/gatsbyjs/gatsb)
+* [Gatsby](https://github.com/gatsbyjs/gatsby)
 * [React](https://github.com/facebook/react)
 
 
