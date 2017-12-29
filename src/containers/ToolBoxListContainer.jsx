@@ -106,7 +106,7 @@ class ToolBoxListContainer extends React.Component {
           description: `It's a query language for APIs. <a href="http://graphql.org/" target="_blank">GraphQL</a> 
           gives clients the power to ask for exactly what they need and nothing more.`,
           comment: `The <a href="https://www.graph.cool/" target="_blank">Graphcool</a> framework and its
-          <b>Cloud</b> service lets me use GraphQL without building GraphQL server.`
+          <b>Cloud</b> service manages GraphQL backend for my <a href="https://github.com/greglobinski/lazywill-demo" target="_blank">app.</a>`
         },
         {
           id: 10,
